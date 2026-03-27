@@ -1,0 +1,2644 @@
+
+
+============================== 13:21:39.334906 | cf3a24f8-eb6a-4dc4-88e7-4962617a3073 ==============================
+[0m13:21:39.334906 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m13:21:39.336119 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m13:21:39.711962 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m13:21:40.278976 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m13:21:40.280550 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:21:42.225874 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.itm327.mart_stock_analysis' (models/marts/mart_stock_analysis.sql) depends on a node named 'fact_ml_analysis' which was not found
+[0m13:21:42.227969 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.9948652, "process_in_blocks": "0", "process_kernel_time": 0.99, "process_mem_max_rss": "459776", "process_out_blocks": "0", "process_user_time": 6.11}
+[0m13:21:42.228841 [debug] [Dummy-1   ]: Command `cli run` failed at 13:21:42.228518 after 3.00 seconds
+[0m13:21:42.229504 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 13:30:13.071248 | 7684d239-03f9-468c-8aa6-dd2d7e830453 ==============================
+[0m13:30:13.071248 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m13:30:13.072482 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m13:30:13.463276 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m13:30:14.038863 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m13:30:14.040525 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:30:16.502140 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:30:16.504972 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:30:16.563502 [info ] [Dummy-1   ]: Found 11 models, 19 data tests, 6 sources, 476 macros
+[0m13:30:16.567435 [info ] [Dummy-1   ]: 
+[0m13:30:16.568085 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m13:30:16.568719 [info ] [Dummy-1   ]: 
+[0m13:30:16.569595 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m13:30:16.577904 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m13:30:16.686045 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m13:30:16.686730 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m13:30:16.687255 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:17.837007 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 1.150 seconds
+[0m13:30:17.842545 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m13:30:17.859857 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:30:17.860543 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:30:17.861053 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:30:18.520858 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.660 seconds
+[0m13:30:18.526859 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:30:18.527497 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m13:30:18.872284 [debug] [ThreadPool]: SQL status: SUCCESS 108 in 0.344 seconds
+[0m13:30:18.879068 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:30:18.879753 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:30:19.017288 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.137 seconds
+[0m13:30:19.060690 [debug] [Thread-2 (]: Began running node model.itm327.dim_date
+[0m13:30:19.061684 [info ] [Thread-2 (]: 1 of 11 START sql table model RAW.dim_date ..................................... [RUN]
+[0m13:30:19.062504 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_date)
+[0m13:30:19.063093 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_date
+[0m13:30:19.075095 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_date"
+[0m13:30:19.076165 [debug] [Thread-2 (]: Began executing node model.itm327.dim_date
+[0m13:30:19.123545 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_date"
+[0m13:30:19.126047 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_date"
+[0m13:30:19.126804 [debug] [Thread-2 (]: On model.itm327.dim_date: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_date"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_date
+         as
+        (SELECT DISTINCT
+    CAST(DATETIME AS DATE) AS CALENDAR_DATE,
+    DAY(CAST(DATETIME AS DATE)) AS DAY_NUM_IN_MONTH,
+    DAYNAME(CAST(DATETIME AS DATE)) AS DAY_NAME,
+    DAYOFWEEK(CAST(DATETIME AS DATE)) AS DAY_OF_WEEK_NUM,
+    WEEK(CAST(DATETIME AS DATE)) AS WEEK_NUM,
+    MONTH(CAST(DATETIME AS DATE)) AS MONTH_NUM,
+    MONTHNAME(CAST(DATETIME AS DATE)) AS MONTH_NAME,
+    QUARTER(CAST(DATETIME AS DATE)) AS QUARTER,
+    YEAR(CAST(DATETIME AS DATE)) AS YEAR,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKEND_FLAG,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) NOT IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKDAY_FLAG
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+        );
+[0m13:30:19.127427 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:21.502229 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.375 seconds
+[0m13:30:21.537849 [info ] [Thread-2 (]: 1 of 11 OK created sql table model RAW.dim_date ................................ [[32mSUCCESS 1[0m in 2.47s]
+[0m13:30:21.538974 [debug] [Thread-2 (]: Finished running node model.itm327.dim_date
+[0m13:30:21.539766 [debug] [Thread-2 (]: Began running node model.itm327.dim_news
+[0m13:30:21.540782 [info ] [Thread-2 (]: 2 of 11 START sql table model RAW.dim_news ..................................... [RUN]
+[0m13:30:21.541584 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_date, now model.itm327.dim_news)
+[0m13:30:21.542206 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news
+[0m13:30:21.548209 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news"
+[0m13:30:21.549255 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news
+[0m13:30:21.558890 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_news"
+[0m13:30:21.560420 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_news"
+[0m13:30:21.561085 [debug] [Thread-2 (]: On model.itm327.dim_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_news
+         as
+        (SELECT DISTINCT
+    ID AS NEWS_ID,
+    HEADLINE,
+    SUMMARY,
+    SOURCE,
+    CATEGORY,
+    URL,
+    IMAGE
+FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J
+WHERE ID IS NOT NULL
+        );
+[0m13:30:21.561664 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:23.653425 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.092 seconds
+[0m13:30:23.656932 [info ] [Thread-2 (]: 2 of 11 OK created sql table model RAW.dim_news ................................ [[32mSUCCESS 1[0m in 2.12s]
+[0m13:30:23.657909 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news
+[0m13:30:23.658734 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks
+[0m13:30:23.659645 [info ] [Thread-2 (]: 3 of 11 START sql table model RAW.dim_stocks ................................... [RUN]
+[0m13:30:23.660388 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news, now model.itm327.dim_stocks)
+[0m13:30:23.660953 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks
+[0m13:30:23.667160 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks"
+[0m13:30:23.668049 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks
+[0m13:30:23.674609 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_stocks"
+[0m13:30:23.676079 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_stocks"
+[0m13:30:23.676721 [debug] [Thread-2 (]: On model.itm327.dim_stocks: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_stocks"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_stocks
+         as
+        (SELECT DISTINCT
+    SYMBOL,
+    MIN(DATETIME) AS START_DATE,
+    TRUE AS IS_CURRENT
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+GROUP BY SYMBOL
+        );
+[0m13:30:23.677276 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:25.217732 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.540 seconds
+[0m13:30:25.221307 [info ] [Thread-2 (]: 3 of 11 OK created sql table model RAW.dim_stocks .............................. [[32mSUCCESS 1[0m in 1.56s]
+[0m13:30:25.222299 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks
+[0m13:30:25.223036 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_location
+[0m13:30:25.223983 [info ] [Thread-2 (]: 4 of 11 START sql table model RAW.dim_weather_location ......................... [RUN]
+[0m13:30:25.224741 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks, now model.itm327.dim_weather_location)
+[0m13:30:25.225304 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_location
+[0m13:30:25.231327 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_location"
+[0m13:30:25.232230 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_location
+[0m13:30:25.241642 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_weather_location"
+[0m13:30:25.242998 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_weather_location"
+[0m13:30:25.243623 [debug] [Thread-2 (]: On model.itm327.dim_weather_location: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_weather_location"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_weather_location
+         as
+        (SELECT DISTINCT
+    CITY
+FROM SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J
+        );
+[0m13:30:25.244191 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:27.360263 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.116 seconds
+[0m13:30:27.363753 [info ] [Thread-2 (]: 4 of 11 OK created sql table model RAW.dim_weather_location .................... [[32mSUCCESS 1[0m in 2.14s]
+[0m13:30:27.364703 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_location
+[0m13:30:27.365418 [debug] [Thread-2 (]: Began running node model.itm327.raw_news
+[0m13:30:27.366748 [info ] [Thread-2 (]: 5 of 11 START sql view model RAW.raw_news ...................................... [RUN]
+[0m13:30:27.367551 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_location, now model.itm327.raw_news)
+[0m13:30:27.368121 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_news
+[0m13:30:27.374252 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_news"
+[0m13:30:27.375165 [debug] [Thread-2 (]: Began executing node model.itm327.raw_news
+[0m13:30:27.421286 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.raw_news"
+[0m13:30:27.422672 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.raw_news"
+[0m13:30:27.423324 [debug] [Thread-2 (]: On model.itm327.raw_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.raw_news"} */
+create or replace   view SNOWBEARAIR_DB.RAW.raw_news
+  
+   as (
+    -- TODO: Update the source table name to match your prefix (e.g., SMITHJ_NEWS)
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+  );
+[0m13:30:27.423883 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:28.152526 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3456e-0108-374e-001a-e3f3004578ca
+[0m13:30:28.153293 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m13:30:28.159532 [debug] [Thread-2 (]: Database Error in model raw_news (models/staging/raw_news.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_news.sql
+[0m13:30:28.160986 [error] [Thread-2 (]: 5 of 11 ERROR creating sql view model RAW.raw_news ............................. [[31mERROR[0m in 0.79s]
+[0m13:30:28.161946 [debug] [Thread-2 (]: Finished running node model.itm327.raw_news
+[0m13:30:28.162698 [debug] [Thread-2 (]: Began running node model.itm327.raw_stocks
+[0m13:30:28.163574 [debug] [Thread-5 (]: Marking all children of 'model.itm327.raw_news' to be skipped because of status 'error'.  Reason: Database Error in model raw_news (models/staging/raw_news.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_news.sql.
+[0m13:30:28.164481 [info ] [Thread-2 (]: 6 of 11 START sql view model RAW.raw_stocks .................................... [RUN]
+[0m13:30:28.166381 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_news, now model.itm327.raw_stocks)
+[0m13:30:28.167003 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_stocks
+[0m13:30:28.173678 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_stocks"
+[0m13:30:28.174602 [debug] [Thread-2 (]: Began executing node model.itm327.raw_stocks
+[0m13:30:28.181391 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.raw_stocks"
+[0m13:30:28.182729 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.raw_stocks"
+[0m13:30:28.183393 [debug] [Thread-2 (]: On model.itm327.raw_stocks: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.raw_stocks"} */
+create or replace   view SNOWBEARAIR_DB.RAW.raw_stocks
+  
+   as (
+    -- TODO: Update the source table name to match your prefix (e.g., SMITHJ_STOCKS)
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+  );
+[0m13:30:28.183954 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:29.039696 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3456e-0108-374e-001a-e3f3004578e2
+[0m13:30:29.040452 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m13:30:29.045995 [debug] [Thread-2 (]: Database Error in model raw_stocks (models/staging/raw_stocks.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_stocks.sql
+[0m13:30:29.047371 [error] [Thread-2 (]: 6 of 11 ERROR creating sql view model RAW.raw_stocks ........................... [[31mERROR[0m in 0.88s]
+[0m13:30:29.048283 [debug] [Thread-2 (]: Finished running node model.itm327.raw_stocks
+[0m13:30:29.049080 [debug] [Thread-2 (]: Began running node model.itm327.raw_weather
+[0m13:30:29.049817 [debug] [Thread-5 (]: Marking all children of 'model.itm327.raw_stocks' to be skipped because of status 'error'.  Reason: Database Error in model raw_stocks (models/staging/raw_stocks.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_stocks.sql.
+[0m13:30:29.050659 [info ] [Thread-2 (]: 7 of 11 START sql view model RAW.raw_weather ................................... [RUN]
+[0m13:30:29.051643 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_stocks, now model.itm327.raw_weather)
+[0m13:30:29.052218 [debug] [Thread-2 (]: Began compiling node model.itm327.raw_weather
+[0m13:30:29.058058 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.raw_weather"
+[0m13:30:29.059064 [debug] [Thread-2 (]: Began executing node model.itm327.raw_weather
+[0m13:30:29.065854 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.raw_weather"
+[0m13:30:29.067110 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.raw_weather"
+[0m13:30:29.067746 [debug] [Thread-2 (]: On model.itm327.raw_weather: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.raw_weather"} */
+create or replace   view SNOWBEARAIR_DB.RAW.raw_weather
+  
+   as (
+    -- TODO: Update the source table name to match your prefix (e.g., SMITHJ_WEATHER)
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER
+  );
+[0m13:30:29.068378 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:29.737034 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3456e-0108-374e-001a-e3f3004578fa
+[0m13:30:29.737814 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+[0m13:30:29.743506 [debug] [Thread-2 (]: Database Error in model raw_weather (models/staging/raw_weather.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_weather.sql
+[0m13:30:29.744920 [error] [Thread-2 (]: 7 of 11 ERROR creating sql view model RAW.raw_weather .......................... [[31mERROR[0m in 0.69s]
+[0m13:30:29.745872 [debug] [Thread-2 (]: Finished running node model.itm327.raw_weather
+[0m13:30:29.746616 [debug] [Thread-2 (]: Began running node model.itm327.fact_ml_analysis
+[0m13:30:29.747345 [debug] [Thread-5 (]: Marking all children of 'model.itm327.raw_weather' to be skipped because of status 'error'.  Reason: Database Error in model raw_weather (models/staging/raw_weather.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_weather.sql.
+[0m13:30:29.748170 [info ] [Thread-2 (]: 8 of 11 START sql table model RAW.fact_ml_analysis ............................. [RUN]
+[0m13:30:29.749240 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.raw_weather, now model.itm327.fact_ml_analysis)
+[0m13:30:29.749838 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_ml_analysis
+[0m13:30:29.757618 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_ml_analysis"
+[0m13:30:29.758644 [debug] [Thread-2 (]: Began executing node model.itm327.fact_ml_analysis
+[0m13:30:29.765494 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.fact_ml_analysis"
+[0m13:30:29.767768 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.fact_ml_analysis"
+[0m13:30:29.768687 [debug] [Thread-2 (]: On model.itm327.fact_ml_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.fact_ml_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.fact_ml_analysis
+         as
+        (SELECT
+    d.CALENDAR_DATE,
+    s.SYMBOL,
+    w.CITY,
+    r.OPEN,
+    r.HIGH,
+    r.LOW,
+    r.CLOSE,
+    r.VOLUME,
+    rw.MAX_TEMP,
+    rw.PRECIP AS PRECIPITATION,
+    (
+        SELECT COUNT(*) 
+        FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J n
+        WHERE CAST(n.DATETIME AS DATE) = CAST(r.DATETIME AS DATE)
+    ) AS NEWS_COUNT_TOTAL
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J r
+JOIN SNOWBEARAIR_DB.RAW.dim_date d 
+    ON CAST(r.DATETIME AS DATE) = d.CALENDAR_DATE
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s 
+    ON r.SYMBOL = s.SYMBOL
+LEFT JOIN SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J rw 
+    ON CAST(r.DATETIME AS DATE) = rw.DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w 
+    ON rw.CITY = w.CITY
+        );
+[0m13:30:29.769325 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:37.753784 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 7.984 seconds
+[0m13:30:37.757427 [info ] [Thread-2 (]: 8 of 11 OK created sql table model RAW.fact_ml_analysis ........................ [[32mSUCCESS 1[0m in 8.01s]
+[0m13:30:37.758497 [debug] [Thread-2 (]: Finished running node model.itm327.fact_ml_analysis
+[0m13:30:37.760074 [debug] [Thread-2 (]: Began running node model.itm327.bridge_fact_news
+[0m13:30:37.761155 [info ] [Thread-2 (]: 9 of 11 START sql table model RAW.bridge_fact_news ............................. [RUN]
+[0m13:30:37.761993 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_ml_analysis, now model.itm327.bridge_fact_news)
+[0m13:30:37.762614 [debug] [Thread-2 (]: Began compiling node model.itm327.bridge_fact_news
+[0m13:30:37.772594 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.bridge_fact_news"
+[0m13:30:37.773499 [debug] [Thread-2 (]: Began executing node model.itm327.bridge_fact_news
+[0m13:30:37.780082 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.bridge_fact_news"
+[0m13:30:37.781720 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.bridge_fact_news"
+[0m13:30:37.782415 [debug] [Thread-2 (]: On model.itm327.bridge_fact_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.bridge_fact_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.bridge_fact_news
+         as
+        (SELECT DISTINCT
+    f.SYMBOL,
+    f.CALENDAR_DATE,
+    n.NEWS_ID
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J r
+    ON r.RELATED = f.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_news n
+    ON n.NEWS_ID = r.ID
+        );
+[0m13:30:37.782987 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:41.882802 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 4.100 seconds
+[0m13:30:41.886226 [info ] [Thread-2 (]: 9 of 11 OK created sql table model RAW.bridge_fact_news ........................ [[32mSUCCESS 1[0m in 4.12s]
+[0m13:30:41.887185 [debug] [Thread-2 (]: Finished running node model.itm327.bridge_fact_news
+[0m13:30:41.887939 [debug] [Thread-2 (]: Began running node model.itm327.mart_stock_analysis
+[0m13:30:41.889294 [info ] [Thread-2 (]: 10 of 11 START sql table model RAW.mart_stock_analysis ......................... [RUN]
+[0m13:30:41.890155 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.bridge_fact_news, now model.itm327.mart_stock_analysis)
+[0m13:30:41.890744 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_stock_analysis
+[0m13:30:41.897657 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_stock_analysis"
+[0m13:30:41.898704 [debug] [Thread-2 (]: Began executing node model.itm327.mart_stock_analysis
+[0m13:30:41.905382 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.mart_stock_analysis"
+[0m13:30:41.907572 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_stock_analysis"
+[0m13:30:41.908283 [debug] [Thread-2 (]: On model.itm327.mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m13:30:41.909017 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:44.373457 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.464 seconds
+[0m13:30:44.376767 [info ] [Thread-2 (]: 10 of 11 OK created sql table model RAW.mart_stock_analysis .................... [[32mSUCCESS 1[0m in 2.49s]
+[0m13:30:44.377723 [debug] [Thread-2 (]: Finished running node model.itm327.mart_stock_analysis
+[0m13:30:44.378535 [debug] [Thread-2 (]: Began running node model.itm327.mart_news_sentiment
+[0m13:30:44.379419 [info ] [Thread-2 (]: 11 of 11 START python table model RAW.mart_news_sentiment ...................... [RUN]
+[0m13:30:44.380138 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.mart_stock_analysis, now model.itm327.mart_news_sentiment)
+[0m13:30:44.380698 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_news_sentiment
+[0m13:30:44.418535 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_news_sentiment"
+[0m13:30:44.419501 [debug] [Thread-2 (]: Began executing node model.itm327.mart_news_sentiment
+[0m13:30:44.429501 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.mart_news_sentiment"
+[0m13:30:44.432415 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_news_sentiment"
+[0m13:30:44.433522 [debug] [Thread-2 (]: On model.itm327.mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_news_sentiment"} */
+WITH mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL mart_news_sentiment__dbt_sp();
+[0m13:30:44.434474 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:30:57.287156 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 12.852 seconds
+[0m13:30:57.291396 [info ] [Thread-2 (]: 11 of 11 OK created python table model RAW.mart_news_sentiment ................. [[32mSUCCESS 1[0m in 12.91s]
+[0m13:30:57.292407 [debug] [Thread-2 (]: Finished running node model.itm327.mart_news_sentiment
+[0m13:30:57.295151 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m13:30:57.295762 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m13:30:57.296234 [debug] [Dummy-1   ]: Connection 'model.itm327.mart_news_sentiment' was properly closed.
+[0m13:30:57.296932 [info ] [Dummy-1   ]: 
+[0m13:30:57.297486 [info ] [Dummy-1   ]: Finished running 8 table models, 3 view models in 0 hours 0 minutes and 40.73 seconds (40.73s).
+[0m13:30:57.300421 [debug] [Dummy-1   ]: Command end result
+[0m13:30:57.340770 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:30:57.343712 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:30:57.352389 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m13:30:57.352991 [info ] [Dummy-1   ]: 
+[0m13:30:57.353678 [info ] [Dummy-1   ]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m13:30:57.354215 [info ] [Dummy-1   ]: 
+[0m13:30:57.354939 [error] [Dummy-1   ]:   Database Error in model raw_news (models/staging/raw_news.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_news.sql
+[0m13:30:57.355449 [info ] [Dummy-1   ]: 
+[0m13:30:57.356065 [error] [Dummy-1   ]:   Database Error in model raw_stocks (models/staging/raw_stocks.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_stocks.sql
+[0m13:30:57.356549 [info ] [Dummy-1   ]: 
+[0m13:30:57.357144 [error] [Dummy-1   ]:   Database Error in model raw_weather (models/staging/raw_weather.sql)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/raw_weather.sql
+[0m13:30:57.357664 [info ] [Dummy-1   ]: 
+[0m13:30:57.358201 [info ] [Dummy-1   ]: Done. PASS=8 WARN=0 ERROR=3 SKIP=0 TOTAL=11
+[0m13:30:57.360288 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 44.39547, "process_in_blocks": "0", "process_kernel_time": 1.05, "process_mem_max_rss": "481448", "process_out_blocks": "0", "process_user_time": 7.6}
+[0m13:30:57.360992 [debug] [Dummy-1   ]: Command `cli run` failed at 13:30:57.360718 after 44.40 seconds
+[0m13:30:57.361570 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 13:34:05.497236 | 23e15dda-c31c-45e8-83bc-6cb178d84eaa ==============================
+[0m13:34:05.497236 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m13:34:05.498533 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m13:34:05.878874 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m13:34:06.445422 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m13:34:06.834453 [debug] [Dummy-1   ]: Partial parsing enabled: 3 files deleted, 0 files added, 0 files changed.
+[0m13:34:06.835418 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/staging/raw_weather.sql
+[0m13:34:06.835994 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/staging/raw_news.sql
+[0m13:34:06.836491 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/staging/raw_stocks.sql
+[0m13:34:06.978646 [warn ] [Dummy-1   ]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.itm327.staging
+[0m13:34:07.137306 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:34:07.140453 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:34:07.197522 [info ] [Dummy-1   ]: Found 8 models, 19 data tests, 6 sources, 476 macros
+[0m13:34:07.201192 [info ] [Dummy-1   ]: 
+[0m13:34:07.201874 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m13:34:07.202373 [info ] [Dummy-1   ]: 
+[0m13:34:07.203266 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m13:34:07.211286 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m13:34:07.321290 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m13:34:07.322000 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m13:34:07.322521 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:34:07.911991 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.589 seconds
+[0m13:34:07.917920 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m13:34:07.935547 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:34:07.936195 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:34:07.936697 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:34:08.475214 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.538 seconds
+[0m13:34:08.481452 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:34:08.482141 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m13:34:09.354604 [debug] [ThreadPool]: SQL status: SUCCESS 115 in 0.872 seconds
+[0m13:34:09.361706 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:34:09.362373 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:34:09.487492 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.124 seconds
+[0m13:34:09.531636 [debug] [Thread-2 (]: Began running node model.itm327.dim_date
+[0m13:34:09.532646 [info ] [Thread-2 (]: 1 of 8 START sql table model RAW.dim_date ...................................... [RUN]
+[0m13:34:09.533485 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_date)
+[0m13:34:09.534122 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_date
+[0m13:34:09.546639 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_date"
+[0m13:34:09.547696 [debug] [Thread-2 (]: Began executing node model.itm327.dim_date
+[0m13:34:09.595941 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_date"
+[0m13:34:09.598490 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_date"
+[0m13:34:09.599288 [debug] [Thread-2 (]: On model.itm327.dim_date: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_date"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_date
+         as
+        (SELECT DISTINCT
+    CAST(DATETIME AS DATE) AS CALENDAR_DATE,
+    DAY(CAST(DATETIME AS DATE)) AS DAY_NUM_IN_MONTH,
+    DAYNAME(CAST(DATETIME AS DATE)) AS DAY_NAME,
+    DAYOFWEEK(CAST(DATETIME AS DATE)) AS DAY_OF_WEEK_NUM,
+    WEEK(CAST(DATETIME AS DATE)) AS WEEK_NUM,
+    MONTH(CAST(DATETIME AS DATE)) AS MONTH_NUM,
+    MONTHNAME(CAST(DATETIME AS DATE)) AS MONTH_NAME,
+    QUARTER(CAST(DATETIME AS DATE)) AS QUARTER,
+    YEAR(CAST(DATETIME AS DATE)) AS YEAR,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKEND_FLAG,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) NOT IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKDAY_FLAG
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+        );
+[0m13:34:09.599930 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:11.695578 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.095 seconds
+[0m13:34:11.732726 [info ] [Thread-2 (]: 1 of 8 OK created sql table model RAW.dim_date ................................. [[32mSUCCESS 1[0m in 2.20s]
+[0m13:34:11.733826 [debug] [Thread-2 (]: Finished running node model.itm327.dim_date
+[0m13:34:11.734624 [debug] [Thread-2 (]: Began running node model.itm327.dim_news
+[0m13:34:11.735653 [info ] [Thread-2 (]: 2 of 8 START sql table model RAW.dim_news ...................................... [RUN]
+[0m13:34:11.736474 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_date, now model.itm327.dim_news)
+[0m13:34:11.737078 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news
+[0m13:34:11.745462 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news"
+[0m13:34:11.746474 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news
+[0m13:34:11.753571 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_news"
+[0m13:34:11.755219 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_news"
+[0m13:34:11.755911 [debug] [Thread-2 (]: On model.itm327.dim_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_news
+         as
+        (SELECT DISTINCT
+    ID AS NEWS_ID,
+    HEADLINE,
+    SUMMARY,
+    SOURCE,
+    CATEGORY,
+    URL,
+    IMAGE
+FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J
+WHERE ID IS NOT NULL
+        );
+[0m13:34:11.756489 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:13.232080 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.475 seconds
+[0m13:34:13.235892 [info ] [Thread-2 (]: 2 of 8 OK created sql table model RAW.dim_news ................................. [[32mSUCCESS 1[0m in 1.50s]
+[0m13:34:13.236924 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news
+[0m13:34:13.237709 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks
+[0m13:34:13.238800 [info ] [Thread-2 (]: 3 of 8 START sql table model RAW.dim_stocks .................................... [RUN]
+[0m13:34:13.239621 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news, now model.itm327.dim_stocks)
+[0m13:34:13.240216 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks
+[0m13:34:13.246596 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks"
+[0m13:34:13.247569 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks
+[0m13:34:13.254407 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_stocks"
+[0m13:34:13.255903 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_stocks"
+[0m13:34:13.256554 [debug] [Thread-2 (]: On model.itm327.dim_stocks: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_stocks"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_stocks
+         as
+        (SELECT DISTINCT
+    SYMBOL,
+    MIN(DATETIME) AS START_DATE,
+    TRUE AS IS_CURRENT
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+GROUP BY SYMBOL
+        );
+[0m13:34:13.257168 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:15.619610 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.362 seconds
+[0m13:34:15.623363 [info ] [Thread-2 (]: 3 of 8 OK created sql table model RAW.dim_stocks ............................... [[32mSUCCESS 1[0m in 2.38s]
+[0m13:34:15.624362 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks
+[0m13:34:15.625137 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_location
+[0m13:34:15.626130 [info ] [Thread-2 (]: 4 of 8 START sql table model RAW.dim_weather_location .......................... [RUN]
+[0m13:34:15.626943 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks, now model.itm327.dim_weather_location)
+[0m13:34:15.627544 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_location
+[0m13:34:15.633749 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_location"
+[0m13:34:15.634721 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_location
+[0m13:34:15.644147 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_weather_location"
+[0m13:34:15.645623 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_weather_location"
+[0m13:34:15.646297 [debug] [Thread-2 (]: On model.itm327.dim_weather_location: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_weather_location"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_weather_location
+         as
+        (SELECT DISTINCT
+    CITY
+FROM SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J
+        );
+[0m13:34:15.646879 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:17.205554 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.558 seconds
+[0m13:34:17.209353 [info ] [Thread-2 (]: 4 of 8 OK created sql table model RAW.dim_weather_location ..................... [[32mSUCCESS 1[0m in 1.58s]
+[0m13:34:17.210398 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_location
+[0m13:34:17.211833 [debug] [Thread-2 (]: Began running node model.itm327.fact_ml_analysis
+[0m13:34:17.213123 [info ] [Thread-2 (]: 5 of 8 START sql table model RAW.fact_ml_analysis .............................. [RUN]
+[0m13:34:17.213977 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_location, now model.itm327.fact_ml_analysis)
+[0m13:34:17.214585 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_ml_analysis
+[0m13:34:17.222867 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_ml_analysis"
+[0m13:34:17.223812 [debug] [Thread-2 (]: Began executing node model.itm327.fact_ml_analysis
+[0m13:34:17.230564 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.fact_ml_analysis"
+[0m13:34:17.232870 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.fact_ml_analysis"
+[0m13:34:17.233630 [debug] [Thread-2 (]: On model.itm327.fact_ml_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.fact_ml_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.fact_ml_analysis
+         as
+        (SELECT
+    d.CALENDAR_DATE,
+    s.SYMBOL,
+    w.CITY,
+    r.OPEN,
+    r.HIGH,
+    r.LOW,
+    r.CLOSE,
+    r.VOLUME,
+    rw.MAX_TEMP,
+    rw.PRECIP AS PRECIPITATION,
+    (
+        SELECT COUNT(*) 
+        FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J n
+        WHERE CAST(n.DATETIME AS DATE) = CAST(r.DATETIME AS DATE)
+    ) AS NEWS_COUNT_TOTAL
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J r
+JOIN SNOWBEARAIR_DB.RAW.dim_date d 
+    ON CAST(r.DATETIME AS DATE) = d.CALENDAR_DATE
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s 
+    ON r.SYMBOL = s.SYMBOL
+LEFT JOIN SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J rw 
+    ON CAST(r.DATETIME AS DATE) = rw.DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w 
+    ON rw.CITY = w.CITY
+        );
+[0m13:34:17.234274 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:27.082624 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 9.848 seconds
+[0m13:34:27.086229 [info ] [Thread-2 (]: 5 of 8 OK created sql table model RAW.fact_ml_analysis ......................... [[32mSUCCESS 1[0m in 9.87s]
+[0m13:34:27.087210 [debug] [Thread-2 (]: Finished running node model.itm327.fact_ml_analysis
+[0m13:34:27.088572 [debug] [Thread-2 (]: Began running node model.itm327.bridge_fact_news
+[0m13:34:27.089724 [info ] [Thread-2 (]: 6 of 8 START sql table model RAW.bridge_fact_news .............................. [RUN]
+[0m13:34:27.090535 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_ml_analysis, now model.itm327.bridge_fact_news)
+[0m13:34:27.091111 [debug] [Thread-2 (]: Began compiling node model.itm327.bridge_fact_news
+[0m13:34:27.097903 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.bridge_fact_news"
+[0m13:34:27.098923 [debug] [Thread-2 (]: Began executing node model.itm327.bridge_fact_news
+[0m13:34:27.108063 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.bridge_fact_news"
+[0m13:34:27.109834 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.bridge_fact_news"
+[0m13:34:27.110522 [debug] [Thread-2 (]: On model.itm327.bridge_fact_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.bridge_fact_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.bridge_fact_news
+         as
+        (SELECT DISTINCT
+    f.SYMBOL,
+    f.CALENDAR_DATE,
+    n.NEWS_ID
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J r
+    ON r.RELATED = f.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_news n
+    ON n.NEWS_ID = r.ID
+        );
+[0m13:34:27.111093 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:28.832910 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.722 seconds
+[0m13:34:28.836471 [info ] [Thread-2 (]: 6 of 8 OK created sql table model RAW.bridge_fact_news ......................... [[32mSUCCESS 1[0m in 1.75s]
+[0m13:34:28.837442 [debug] [Thread-2 (]: Finished running node model.itm327.bridge_fact_news
+[0m13:34:28.838235 [debug] [Thread-2 (]: Began running node model.itm327.mart_stock_analysis
+[0m13:34:28.839634 [info ] [Thread-2 (]: 7 of 8 START sql table model RAW.mart_stock_analysis ........................... [RUN]
+[0m13:34:28.840461 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.bridge_fact_news, now model.itm327.mart_stock_analysis)
+[0m13:34:28.841046 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_stock_analysis
+[0m13:34:28.848241 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_stock_analysis"
+[0m13:34:28.849285 [debug] [Thread-2 (]: Began executing node model.itm327.mart_stock_analysis
+[0m13:34:28.855840 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.mart_stock_analysis"
+[0m13:34:28.857997 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_stock_analysis"
+[0m13:34:28.858823 [debug] [Thread-2 (]: On model.itm327.mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m13:34:28.859460 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:30.500084 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.640 seconds
+[0m13:34:30.503676 [info ] [Thread-2 (]: 7 of 8 OK created sql table model RAW.mart_stock_analysis ...................... [[32mSUCCESS 1[0m in 1.66s]
+[0m13:34:30.504642 [debug] [Thread-2 (]: Finished running node model.itm327.mart_stock_analysis
+[0m13:34:30.505388 [debug] [Thread-2 (]: Began running node model.itm327.mart_news_sentiment
+[0m13:34:30.506364 [info ] [Thread-2 (]: 8 of 8 START python table model RAW.mart_news_sentiment ........................ [RUN]
+[0m13:34:30.507162 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.mart_stock_analysis, now model.itm327.mart_news_sentiment)
+[0m13:34:30.507748 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_news_sentiment
+[0m13:34:30.543392 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_news_sentiment"
+[0m13:34:30.544395 [debug] [Thread-2 (]: Began executing node model.itm327.mart_news_sentiment
+[0m13:34:30.557165 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.mart_news_sentiment"
+[0m13:34:30.560179 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_news_sentiment"
+[0m13:34:30.561311 [debug] [Thread-2 (]: On model.itm327.mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_news_sentiment"} */
+WITH mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL mart_news_sentiment__dbt_sp();
+[0m13:34:30.562283 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:34:41.544912 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 10.982 seconds
+[0m13:34:41.549654 [info ] [Thread-2 (]: 8 of 8 OK created python table model RAW.mart_news_sentiment ................... [[32mSUCCESS 1[0m in 11.04s]
+[0m13:34:41.550685 [debug] [Thread-2 (]: Finished running node model.itm327.mart_news_sentiment
+[0m13:34:41.553513 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m13:34:41.554145 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m13:34:41.554609 [debug] [Dummy-1   ]: Connection 'model.itm327.mart_news_sentiment' was properly closed.
+[0m13:34:41.555253 [info ] [Dummy-1   ]: 
+[0m13:34:41.555805 [info ] [Dummy-1   ]: Finished running 8 table models in 0 hours 0 minutes and 34.35 seconds (34.35s).
+[0m13:34:41.558014 [debug] [Dummy-1   ]: Command end result
+[0m13:34:41.598984 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:34:41.602044 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:34:41.611192 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m13:34:41.611837 [info ] [Dummy-1   ]: 
+[0m13:34:41.612535 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m13:34:41.613058 [info ] [Dummy-1   ]: 
+[0m13:34:41.613614 [info ] [Dummy-1   ]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m13:34:41.615646 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 36.22035, "process_in_blocks": "0", "process_kernel_time": 1.21, "process_mem_max_rss": "432052", "process_out_blocks": "0", "process_user_time": 5.76}
+[0m13:34:41.616398 [debug] [Dummy-1   ]: Command `cli run` succeeded at 13:34:41.616110 after 36.22 seconds
+[0m13:34:41.616982 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 12:07:22.300078 | 377bcd7c-ad12-452b-99a4-e514007bcf67 ==============================
+[0m12:07:22.300078 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m12:07:22.301117 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m12:07:22.655724 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m12:07:23.202048 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m12:07:23.559561 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:07:23.560199 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:07:23.569190 [warn ] [Dummy-1   ]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.itm327.staging
+[0m12:07:23.752924 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:07:23.755412 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:07:23.832666 [info ] [Dummy-1   ]: Found 8 models, 19 data tests, 6 sources, 476 macros
+[0m12:07:23.837739 [info ] [Dummy-1   ]: 
+[0m12:07:23.838295 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m12:07:23.838865 [info ] [Dummy-1   ]: 
+[0m12:07:23.839699 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m12:07:23.846962 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m12:07:23.952462 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m12:07:23.953064 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m12:07:23.953537 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:07:24.464644 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.511 seconds
+[0m12:07:24.469242 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m12:07:24.485521 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:07:24.486104 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m12:07:24.486597 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:07:24.956203 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.469 seconds
+[0m12:07:24.961871 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:07:24.962427 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m12:07:25.174015 [debug] [ThreadPool]: SQL status: SUCCESS 120 in 0.211 seconds
+[0m12:07:25.180364 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:07:25.180918 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m12:07:25.249226 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.068 seconds
+[0m12:07:25.293491 [debug] [Thread-2 (]: Began running node model.itm327.dim_date
+[0m12:07:25.294321 [info ] [Thread-2 (]: 1 of 27 START sql table model RAW.dim_date ..................................... [RUN]
+[0m12:07:25.295037 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_date)
+[0m12:07:25.295623 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_date
+[0m12:07:25.306856 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_date"
+[0m12:07:25.307694 [debug] [Thread-2 (]: Began executing node model.itm327.dim_date
+[0m12:07:25.352634 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_date"
+[0m12:07:25.354726 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_date"
+[0m12:07:25.355397 [debug] [Thread-2 (]: On model.itm327.dim_date: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_date"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_date
+         as
+        (SELECT DISTINCT
+    CAST(DATETIME AS DATE) AS CALENDAR_DATE,
+    DAY(CAST(DATETIME AS DATE)) AS DAY_NUM_IN_MONTH,
+    DAYNAME(CAST(DATETIME AS DATE)) AS DAY_NAME,
+    DAYOFWEEK(CAST(DATETIME AS DATE)) AS DAY_OF_WEEK_NUM,
+    WEEK(CAST(DATETIME AS DATE)) AS WEEK_NUM,
+    MONTH(CAST(DATETIME AS DATE)) AS MONTH_NUM,
+    MONTHNAME(CAST(DATETIME AS DATE)) AS MONTH_NAME,
+    QUARTER(CAST(DATETIME AS DATE)) AS QUARTER,
+    YEAR(CAST(DATETIME AS DATE)) AS YEAR,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKEND_FLAG,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) NOT IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKDAY_FLAG
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+        );
+[0m12:07:25.356017 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:27.389225 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.033 seconds
+[0m12:07:27.422089 [info ] [Thread-2 (]: 1 of 27 OK created sql table model RAW.dim_date ................................ [[32mSUCCESS 1[0m in 2.12s]
+[0m12:07:27.423032 [debug] [Thread-2 (]: Finished running node model.itm327.dim_date
+[0m12:07:27.423747 [debug] [Thread-2 (]: Began running node model.itm327.dim_news
+[0m12:07:27.424606 [info ] [Thread-2 (]: 2 of 27 START sql table model RAW.dim_news ..................................... [RUN]
+[0m12:07:27.425289 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_date, now model.itm327.dim_news)
+[0m12:07:27.425840 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news
+[0m12:07:27.431371 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news"
+[0m12:07:27.432208 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news
+[0m12:07:27.438003 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_news"
+[0m12:07:27.439399 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_news"
+[0m12:07:27.440037 [debug] [Thread-2 (]: On model.itm327.dim_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_news
+         as
+        (SELECT DISTINCT
+    ID AS NEWS_ID,
+    HEADLINE,
+    SUMMARY,
+    SOURCE,
+    CATEGORY,
+    URL,
+    IMAGE
+FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J
+WHERE ID IS NOT NULL
+        );
+[0m12:07:27.440585 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:29.492331 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.051 seconds
+[0m12:07:29.495818 [info ] [Thread-2 (]: 2 of 27 OK created sql table model RAW.dim_news ................................ [[32mSUCCESS 1[0m in 2.07s]
+[0m12:07:29.496745 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news
+[0m12:07:29.497428 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks
+[0m12:07:29.498267 [info ] [Thread-2 (]: 3 of 27 START sql table model RAW.dim_stocks ................................... [RUN]
+[0m12:07:29.499063 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news, now model.itm327.dim_stocks)
+[0m12:07:29.499664 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks
+[0m12:07:29.505270 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks"
+[0m12:07:29.506081 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks
+[0m12:07:29.514087 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_stocks"
+[0m12:07:29.515381 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_stocks"
+[0m12:07:29.516232 [debug] [Thread-2 (]: On model.itm327.dim_stocks: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_stocks"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_stocks
+         as
+        (SELECT DISTINCT
+    SYMBOL,
+    MIN(DATETIME) AS START_DATE,
+    TRUE AS IS_CURRENT
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+GROUP BY SYMBOL
+        );
+[0m12:07:29.516798 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:31.029712 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.513 seconds
+[0m12:07:31.033167 [info ] [Thread-2 (]: 3 of 27 OK created sql table model RAW.dim_stocks .............................. [[32mSUCCESS 1[0m in 1.53s]
+[0m12:07:31.034075 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks
+[0m12:07:31.034769 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_location
+[0m12:07:31.035663 [info ] [Thread-2 (]: 4 of 27 START sql table model RAW.dim_weather_location ......................... [RUN]
+[0m12:07:31.036340 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks, now model.itm327.dim_weather_location)
+[0m12:07:31.036890 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_location
+[0m12:07:31.042459 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_location"
+[0m12:07:31.043270 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_location
+[0m12:07:31.049314 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_weather_location"
+[0m12:07:31.050641 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_weather_location"
+[0m12:07:31.051240 [debug] [Thread-2 (]: On model.itm327.dim_weather_location: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_weather_location"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_weather_location
+         as
+        (SELECT DISTINCT
+    CITY
+FROM SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J
+        );
+[0m12:07:31.051800 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:32.842536 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.790 seconds
+[0m12:07:32.846180 [info ] [Thread-2 (]: 4 of 27 OK created sql table model RAW.dim_weather_location .................... [[32mSUCCESS 1[0m in 1.81s]
+[0m12:07:32.847091 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_location
+[0m12:07:32.847838 [debug] [Thread-2 (]: Began running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551
+[0m12:07:32.848930 [info ] [Thread-2 (]: 5 of 27 START test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE . [RUN]
+[0m12:07:32.849667 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_location, now test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551)
+[0m12:07:32.850256 [debug] [Thread-2 (]: Began compiling node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551
+[0m12:07:32.862445 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551"
+[0m12:07:32.863321 [debug] [Thread-2 (]: Began executing node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551
+[0m12:07:32.889821 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551"
+[0m12:07:32.891199 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551"
+[0m12:07:32.891862 [debug] [Thread-2 (]: On test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where CLOSE is not null and CLOSE <= 0
+
+
+      
+    ) dbt_internal_test
+[0m12:07:32.892438 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:33.407914 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004667be
+[0m12:07:33.408702 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:33.414693 [debug] [Thread-2 (]: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.sql
+[0m12:07:33.415691 [error] [Thread-2 (]: 5 of 27 ERROR source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE ...... [[31mERROR[0m in 0.57s]
+[0m12:07:33.416593 [debug] [Thread-2 (]: Finished running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551
+[0m12:07:33.417299 [debug] [Thread-2 (]: Began running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3
+[0m12:07:33.418156 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551' to be skipped because of status 'error'.  Reason: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.sql.
+[0m12:07:33.418903 [info ] [Thread-2 (]: 6 of 27 START test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH .. [RUN]
+[0m12:07:33.420182 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.2a840cd551, now test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3)
+[0m12:07:33.420779 [debug] [Thread-2 (]: Began compiling node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3
+[0m12:07:33.427896 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3"
+[0m12:07:33.428720 [debug] [Thread-2 (]: Began executing node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3
+[0m12:07:33.433386 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3"
+[0m12:07:33.434636 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3"
+[0m12:07:33.435280 [debug] [Thread-2 (]: On test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where HIGH is not null and HIGH <= 0
+
+
+      
+    ) dbt_internal_test
+[0m12:07:33.435870 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:33.852338 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004667d6
+[0m12:07:33.853066 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:33.858562 [debug] [Thread-2 (]: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.sql
+[0m12:07:33.859566 [error] [Thread-2 (]: 6 of 27 ERROR source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH ....... [[31mERROR[0m in 0.44s]
+[0m12:07:33.860471 [debug] [Thread-2 (]: Finished running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3
+[0m12:07:33.861172 [debug] [Thread-2 (]: Began running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2
+[0m12:07:33.861907 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3' to be skipped because of status 'error'.  Reason: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.sql.
+[0m12:07:33.862559 [info ] [Thread-2 (]: 7 of 27 START test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW ... [RUN]
+[0m12:07:33.863452 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.2c93adbeb3, now test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2)
+[0m12:07:33.864060 [debug] [Thread-2 (]: Began compiling node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2
+[0m12:07:33.871026 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2"
+[0m12:07:33.871842 [debug] [Thread-2 (]: Began executing node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2
+[0m12:07:33.876531 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2"
+[0m12:07:33.877751 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2"
+[0m12:07:33.878404 [debug] [Thread-2 (]: On test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where LOW is not null and LOW <= 0
+
+
+      
+    ) dbt_internal_test
+[0m12:07:33.878974 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:34.496520 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004667ee
+[0m12:07:34.497246 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:34.505560 [debug] [Thread-2 (]: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.sql
+[0m12:07:34.506510 [error] [Thread-2 (]: 7 of 27 ERROR source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW ........ [[31mERROR[0m in 0.64s]
+[0m12:07:34.507379 [debug] [Thread-2 (]: Finished running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2
+[0m12:07:34.508088 [debug] [Thread-2 (]: Began running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca
+[0m12:07:34.508848 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2' to be skipped because of status 'error'.  Reason: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.sql.
+[0m12:07:34.509509 [info ] [Thread-2 (]: 8 of 27 START test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN .. [RUN]
+[0m12:07:34.510382 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.d05ca663a2, now test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca)
+[0m12:07:34.510953 [debug] [Thread-2 (]: Began compiling node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca
+[0m12:07:34.517581 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca"
+[0m12:07:34.518389 [debug] [Thread-2 (]: Began executing node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca
+[0m12:07:34.522901 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca"
+[0m12:07:34.524154 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca"
+[0m12:07:34.524775 [debug] [Thread-2 (]: On test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where OPEN is not null and OPEN <= 0
+
+
+      
+    ) dbt_internal_test
+[0m12:07:34.525323 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:35.111717 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466806
+[0m12:07:35.112460 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:35.117886 [debug] [Thread-2 (]: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.sql
+[0m12:07:35.118919 [error] [Thread-2 (]: 8 of 27 ERROR source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN ....... [[31mERROR[0m in 0.61s]
+[0m12:07:35.119821 [debug] [Thread-2 (]: Finished running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca
+[0m12:07:35.120523 [debug] [Thread-2 (]: Began running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4
+[0m12:07:35.121236 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca' to be skipped because of status 'error'.  Reason: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.sql.
+[0m12:07:35.121889 [info ] [Thread-2 (]: 9 of 27 START test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME  [RUN]
+[0m12:07:35.122790 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.ce0beec8ca, now test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4)
+[0m12:07:35.123368 [debug] [Thread-2 (]: Began compiling node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4
+[0m12:07:35.130285 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4"
+[0m12:07:35.131098 [debug] [Thread-2 (]: Began executing node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4
+[0m12:07:35.135815 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4"
+[0m12:07:35.137051 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4"
+[0m12:07:35.137691 [debug] [Thread-2 (]: On test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+
+select *
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where VOLUME is not null and VOLUME <= 0
+
+
+      
+    ) dbt_internal_test
+[0m12:07:35.138249 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:35.773746 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046681e
+[0m12:07:35.774443 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:35.779862 [debug] [Thread-2 (]: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.sql
+[0m12:07:35.780787 [error] [Thread-2 (]: 9 of 27 ERROR source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME ..... [[31mERROR[0m in 0.66s]
+[0m12:07:35.781655 [debug] [Thread-2 (]: Finished running node test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4
+[0m12:07:35.782340 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2
+[0m12:07:35.783047 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4' to be skipped because of status 'error'.  Reason: Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.sql.
+[0m12:07:35.783691 [info ] [Thread-2 (]: 10 of 27 START test source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME ......... [RUN]
+[0m12:07:35.784553 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.9e2a68acf4, now test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2)
+[0m12:07:35.785113 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2
+[0m12:07:35.797958 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2"
+[0m12:07:35.798768 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2
+[0m12:07:35.803158 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2"
+[0m12:07:35.804393 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2"
+[0m12:07:35.805018 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select DATETIME
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where DATETIME is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:35.805574 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:36.314668 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466836
+[0m12:07:36.315391 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m12:07:36.320871 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.sql
+[0m12:07:36.321813 [error] [Thread-2 (]: 10 of 27 ERROR source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME .............. [[31mERROR[0m in 0.54s]
+[0m12:07:36.322675 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2
+[0m12:07:36.323365 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129
+[0m12:07:36.324090 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.sql.
+[0m12:07:36.324733 [info ] [Thread-2 (]: 11 of 27 START test source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE ......... [RUN]
+[0m12:07:36.325601 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.ee155b64c2, now test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129)
+[0m12:07:36.326165 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129
+[0m12:07:36.333193 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129"
+[0m12:07:36.333992 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129
+[0m12:07:36.338608 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129"
+[0m12:07:36.339846 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129"
+[0m12:07:36.340679 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select HEADLINE
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where HEADLINE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:36.341268 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:36.908429 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046684e
+[0m12:07:36.909131 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m12:07:36.914513 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.sql
+[0m12:07:36.915431 [error] [Thread-2 (]: 11 of 27 ERROR source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE .............. [[31mERROR[0m in 0.59s]
+[0m12:07:36.916318 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129
+[0m12:07:36.917003 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324
+[0m12:07:36.917703 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.sql.
+[0m12:07:36.918332 [info ] [Thread-2 (]: 12 of 27 START test source_not_null_snowbearair_LASTN_FI_NEWS_ID ............... [RUN]
+[0m12:07:36.919234 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.c2df2ea129, now test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324)
+[0m12:07:36.919819 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324
+[0m12:07:36.926803 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324"
+[0m12:07:36.927593 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324
+[0m12:07:36.934698 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324"
+[0m12:07:36.935932 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324"
+[0m12:07:36.936548 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:36.937092 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:37.506179 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466866
+[0m12:07:37.506874 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m12:07:37.512317 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_ID.sql
+[0m12:07:37.513239 [error] [Thread-2 (]: 12 of 27 ERROR source_not_null_snowbearair_LASTN_FI_NEWS_ID .................... [[31mERROR[0m in 0.59s]
+[0m12:07:37.514088 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324
+[0m12:07:37.514752 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed
+[0m12:07:37.515459 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_ID.sql.
+[0m12:07:37.516120 [info ] [Thread-2 (]: 13 of 27 START test source_not_null_snowbearair_LASTN_FI_NEWS_RELATED .......... [RUN]
+[0m12:07:37.516971 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_ID.96ef2d3324, now test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed)
+[0m12:07:37.517521 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed
+[0m12:07:37.524775 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed"
+[0m12:07:37.525560 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed
+[0m12:07:37.530153 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed"
+[0m12:07:37.531373 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed"
+[0m12:07:37.532004 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select RELATED
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where RELATED is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:37.532551 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:38.115065 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046687e
+[0m12:07:38.115780 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m12:07:38.121169 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_RELATED (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.sql
+[0m12:07:38.122085 [error] [Thread-2 (]: 13 of 27 ERROR source_not_null_snowbearair_LASTN_FI_NEWS_RELATED ............... [[31mERROR[0m in 0.60s]
+[0m12:07:38.122979 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed
+[0m12:07:38.123695 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423
+[0m12:07:38.124409 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_RELATED (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.sql.
+[0m12:07:38.125036 [info ] [Thread-2 (]: 14 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE .......... [RUN]
+[0m12:07:38.125884 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.0f216ff4ed, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423)
+[0m12:07:38.126459 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423
+[0m12:07:38.133375 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423"
+[0m12:07:38.134147 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423
+[0m12:07:38.141022 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423"
+[0m12:07:38.142253 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423"
+[0m12:07:38.142867 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select CLOSE
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where CLOSE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:38.143413 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:38.637800 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466896
+[0m12:07:38.638588 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:38.644041 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.sql
+[0m12:07:38.644964 [error] [Thread-2 (]: 14 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE ............... [[31mERROR[0m in 0.52s]
+[0m12:07:38.645823 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423
+[0m12:07:38.646513 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d
+[0m12:07:38.647197 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.sql.
+[0m12:07:38.647870 [info ] [Thread-2 (]: 15 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH ........... [RUN]
+[0m12:07:38.648789 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.be73062423, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d)
+[0m12:07:38.649350 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d
+[0m12:07:38.656416 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d"
+[0m12:07:38.657204 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d
+[0m12:07:38.661906 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d"
+[0m12:07:38.663112 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d"
+[0m12:07:38.663758 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select HIGH
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where HIGH is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:38.664360 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:39.208822 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004668ae
+[0m12:07:39.209517 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:39.215110 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.sql
+[0m12:07:39.216048 [error] [Thread-2 (]: 15 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH ................ [[31mERROR[0m in 0.57s]
+[0m12:07:39.216955 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d
+[0m12:07:39.217642 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06
+[0m12:07:39.218375 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.sql.
+[0m12:07:39.219063 [info ] [Thread-2 (]: 16 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_LOW ............ [RUN]
+[0m12:07:39.219920 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.6d3ed0e86d, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06)
+[0m12:07:39.220498 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06
+[0m12:07:39.227361 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06"
+[0m12:07:39.228158 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06
+[0m12:07:39.232711 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06"
+[0m12:07:39.236461 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06"
+[0m12:07:39.237176 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOW
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where LOW is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:39.237741 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:39.709020 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004668c6
+[0m12:07:39.709692 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:39.715002 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.sql
+[0m12:07:39.715916 [error] [Thread-2 (]: 16 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_LOW ................. [[31mERROR[0m in 0.50s]
+[0m12:07:39.716767 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06
+[0m12:07:39.717440 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92
+[0m12:07:39.718138 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.sql.
+[0m12:07:39.718832 [info ] [Thread-2 (]: 17 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN ........... [RUN]
+[0m12:07:39.719692 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.d864600a06, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92)
+[0m12:07:39.720264 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92
+[0m12:07:39.727082 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92"
+[0m12:07:39.727883 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92
+[0m12:07:39.732599 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92"
+[0m12:07:39.733813 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92"
+[0m12:07:39.734427 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select OPEN
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where OPEN is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:39.734981 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:40.230750 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004668de
+[0m12:07:40.231461 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:40.237070 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.sql
+[0m12:07:40.237989 [error] [Thread-2 (]: 17 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN ................ [[31mERROR[0m in 0.52s]
+[0m12:07:40.238927 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92
+[0m12:07:40.239617 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208
+[0m12:07:40.240343 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.sql.
+[0m12:07:40.241000 [info ] [Thread-2 (]: 18 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL ......... [RUN]
+[0m12:07:40.241851 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.a1b6a72e92, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208)
+[0m12:07:40.242417 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208
+[0m12:07:40.249591 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208"
+[0m12:07:40.250387 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208
+[0m12:07:40.254911 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208"
+[0m12:07:40.256295 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208"
+[0m12:07:40.256948 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select SYMBOL
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where SYMBOL is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:40.257505 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:40.681925 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f3004668f6
+[0m12:07:40.682625 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:40.688003 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.sql
+[0m12:07:40.689020 [error] [Thread-2 (]: 18 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL .............. [[31mERROR[0m in 0.45s]
+[0m12:07:40.689955 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208
+[0m12:07:40.690676 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1
+[0m12:07:40.691373 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.sql.
+[0m12:07:40.692031 [info ] [Thread-2 (]: 19 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE ..... [RUN]
+[0m12:07:40.692937 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.95f5a64208, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1)
+[0m12:07:40.693511 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1
+[0m12:07:40.703093 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1"
+[0m12:07:40.703916 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1
+[0m12:07:40.708578 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1"
+[0m12:07:40.709864 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1"
+[0m12:07:40.710486 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select TRADE_DATE
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where TRADE_DATE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:40.711048 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:41.276186 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046690e
+[0m12:07:41.276872 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:41.282236 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.sql
+[0m12:07:41.283151 [error] [Thread-2 (]: 19 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE .......... [[31mERROR[0m in 0.59s]
+[0m12:07:41.284036 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1
+[0m12:07:41.284716 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef
+[0m12:07:41.285404 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.sql.
+[0m12:07:41.286054 [info ] [Thread-2 (]: 20 of 27 START test source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME ......... [RUN]
+[0m12:07:41.286890 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.048fad1dd1, now test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef)
+[0m12:07:41.287451 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef
+[0m12:07:41.294580 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef"
+[0m12:07:41.295365 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef
+[0m12:07:41.299826 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef"
+[0m12:07:41.301044 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef"
+[0m12:07:41.301666 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select VOLUME
+from SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS
+where VOLUME is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:41.302219 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:41.789481 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466926
+[0m12:07:41.790173 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+[0m12:07:41.795561 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.sql
+[0m12:07:41.796489 [error] [Thread-2 (]: 20 of 27 ERROR source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME .............. [[31mERROR[0m in 0.51s]
+[0m12:07:41.797345 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef
+[0m12:07:41.798022 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646
+[0m12:07:41.798744 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.sql.
+[0m12:07:41.799394 [info ] [Thread-2 (]: 21 of 27 START test source_not_null_snowbearair_LASTN_FI_WEATHER_CITY .......... [RUN]
+[0m12:07:41.800285 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.98bbfe53ef, now test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646)
+[0m12:07:41.800851 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646
+[0m12:07:41.810104 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646"
+[0m12:07:41.810877 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646
+[0m12:07:41.815279 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646"
+[0m12:07:41.816652 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646"
+[0m12:07:41.817286 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select CITY
+from SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER
+where CITY is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:41.817834 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:42.438433 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046693e
+[0m12:07:42.439150 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+[0m12:07:42.444569 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_CITY (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.sql
+[0m12:07:42.445496 [error] [Thread-2 (]: 21 of 27 ERROR source_not_null_snowbearair_LASTN_FI_WEATHER_CITY ............... [[31mERROR[0m in 0.65s]
+[0m12:07:42.446361 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646
+[0m12:07:42.447047 [debug] [Thread-2 (]: Began running node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903
+[0m12:07:42.447766 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_CITY (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.sql.
+[0m12:07:42.448445 [info ] [Thread-2 (]: 22 of 27 START test source_not_null_snowbearair_LASTN_FI_WEATHER_DATE .......... [RUN]
+[0m12:07:42.449333 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.cc83736646, now test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903)
+[0m12:07:42.449905 [debug] [Thread-2 (]: Began compiling node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903
+[0m12:07:42.456947 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903"
+[0m12:07:42.457739 [debug] [Thread-2 (]: Began executing node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903
+[0m12:07:42.462541 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903"
+[0m12:07:42.463800 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903"
+[0m12:07:42.464421 [debug] [Thread-2 (]: On test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select DATE
+from SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER
+where DATE is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:42.464971 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:42.984684 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f300466956
+[0m12:07:42.985370 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+[0m12:07:42.990938 [debug] [Thread-2 (]: Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.sql
+[0m12:07:42.991841 [error] [Thread-2 (]: 22 of 27 ERROR source_not_null_snowbearair_LASTN_FI_WEATHER_DATE ............... [[31mERROR[0m in 0.54s]
+[0m12:07:42.992733 [debug] [Thread-2 (]: Finished running node test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903
+[0m12:07:42.993420 [debug] [Thread-2 (]: Began running node test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589
+[0m12:07:42.994115 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.sql.
+[0m12:07:42.994749 [info ] [Thread-2 (]: 23 of 27 START test source_unique_snowbearair_LASTN_FI_NEWS_ID ................. [RUN]
+[0m12:07:42.995599 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.8c72ba9903, now test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589)
+[0m12:07:42.996200 [debug] [Thread-2 (]: Began compiling node test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589
+[0m12:07:43.005903 [debug] [Thread-2 (]: Writing injected SQL for node "test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589"
+[0m12:07:43.006696 [debug] [Thread-2 (]: Began executing node test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589
+[0m12:07:43.014149 [debug] [Thread-2 (]: Writing runtime sql for node "test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589"
+[0m12:07:43.015468 [debug] [Thread-2 (]: Using snowflake connection "test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589"
+[0m12:07:43.016120 [debug] [Thread-2 (]: On test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:07:43.016686 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:43.537268 [debug] [Thread-2 (]: Snowflake adapter: Snowflake query id: 01c3505b-0108-3d78-001a-e3f30046696e
+[0m12:07:43.537955 [debug] [Thread-2 (]: Snowflake adapter: Snowflake error: 002003 (42S02): SQL compilation error:
+Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+[0m12:07:43.543337 [debug] [Thread-2 (]: Database Error in test source_unique_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_unique_snowbearair_LASTN_FI_NEWS_ID.sql
+[0m12:07:43.544268 [error] [Thread-2 (]: 23 of 27 ERROR source_unique_snowbearair_LASTN_FI_NEWS_ID ...................... [[31mERROR[0m in 0.55s]
+[0m12:07:43.545127 [debug] [Thread-2 (]: Finished running node test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589
+[0m12:07:43.545837 [debug] [Thread-2 (]: Began running node model.itm327.fact_ml_analysis
+[0m12:07:43.546536 [debug] [Thread-5 (]: Marking all children of 'test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589' to be skipped because of status 'error'.  Reason: Database Error in test source_unique_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_unique_snowbearair_LASTN_FI_NEWS_ID.sql.
+[0m12:07:43.547348 [info ] [Thread-2 (]: 24 of 27 START sql table model RAW.fact_ml_analysis ............................ [RUN]
+[0m12:07:43.548221 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.itm327.source_unique_snowbearair_LASTN_FI_NEWS_ID.a433a73589, now model.itm327.fact_ml_analysis)
+[0m12:07:43.548806 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_ml_analysis
+[0m12:07:43.556022 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_ml_analysis"
+[0m12:07:43.556803 [debug] [Thread-2 (]: Began executing node model.itm327.fact_ml_analysis
+[0m12:07:43.562837 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.fact_ml_analysis"
+[0m12:07:43.564933 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.fact_ml_analysis"
+[0m12:07:43.565607 [debug] [Thread-2 (]: On model.itm327.fact_ml_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.fact_ml_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.fact_ml_analysis
+         as
+        (SELECT
+    d.CALENDAR_DATE,
+    s.SYMBOL,
+    w.CITY,
+    r.OPEN,
+    r.HIGH,
+    r.LOW,
+    r.CLOSE,
+    r.VOLUME,
+    rw.MAX_TEMP,
+    rw.PRECIP AS PRECIPITATION,
+    (
+        SELECT COUNT(*) 
+        FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J n
+        WHERE CAST(n.DATETIME AS DATE) = CAST(r.DATETIME AS DATE)
+    ) AS NEWS_COUNT_TOTAL
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J r
+JOIN SNOWBEARAIR_DB.RAW.dim_date d 
+    ON CAST(r.DATETIME AS DATE) = d.CALENDAR_DATE
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s 
+    ON r.SYMBOL = s.SYMBOL
+LEFT JOIN SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J rw 
+    ON CAST(r.DATETIME AS DATE) = rw.DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w 
+    ON rw.CITY = w.CITY
+        );
+[0m12:07:43.566181 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:51.386654 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 7.820 seconds
+[0m12:07:51.390317 [info ] [Thread-2 (]: 24 of 27 OK created sql table model RAW.fact_ml_analysis ....................... [[32mSUCCESS 1[0m in 7.84s]
+[0m12:07:51.391234 [debug] [Thread-2 (]: Finished running node model.itm327.fact_ml_analysis
+[0m12:07:51.392544 [debug] [Thread-2 (]: Began running node model.itm327.bridge_fact_news
+[0m12:07:51.393539 [info ] [Thread-2 (]: 25 of 27 START sql table model RAW.bridge_fact_news ............................ [RUN]
+[0m12:07:51.394214 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_ml_analysis, now model.itm327.bridge_fact_news)
+[0m12:07:51.394770 [debug] [Thread-2 (]: Began compiling node model.itm327.bridge_fact_news
+[0m12:07:51.400880 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.bridge_fact_news"
+[0m12:07:51.401681 [debug] [Thread-2 (]: Began executing node model.itm327.bridge_fact_news
+[0m12:07:51.409966 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.bridge_fact_news"
+[0m12:07:51.411397 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.bridge_fact_news"
+[0m12:07:51.412026 [debug] [Thread-2 (]: On model.itm327.bridge_fact_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.bridge_fact_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.bridge_fact_news
+         as
+        (SELECT DISTINCT
+    f.SYMBOL,
+    f.CALENDAR_DATE,
+    n.NEWS_ID
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J r
+    ON r.RELATED = f.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_news n
+    ON n.NEWS_ID = r.ID
+        );
+[0m12:07:51.412570 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:53.965719 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.553 seconds
+[0m12:07:53.969082 [info ] [Thread-2 (]: 25 of 27 OK created sql table model RAW.bridge_fact_news ....................... [[32mSUCCESS 1[0m in 2.57s]
+[0m12:07:53.969983 [debug] [Thread-2 (]: Finished running node model.itm327.bridge_fact_news
+[0m12:07:53.970686 [debug] [Thread-2 (]: Began running node model.itm327.mart_stock_analysis
+[0m12:07:53.971685 [info ] [Thread-2 (]: 26 of 27 START sql table model RAW.mart_stock_analysis ......................... [RUN]
+[0m12:07:53.972355 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.bridge_fact_news, now model.itm327.mart_stock_analysis)
+[0m12:07:53.972895 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_stock_analysis
+[0m12:07:53.979384 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_stock_analysis"
+[0m12:07:53.980198 [debug] [Thread-2 (]: Began executing node model.itm327.mart_stock_analysis
+[0m12:07:53.986262 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.mart_stock_analysis"
+[0m12:07:53.988224 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_stock_analysis"
+[0m12:07:53.988910 [debug] [Thread-2 (]: On model.itm327.mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m12:07:53.989481 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:07:56.517169 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.527 seconds
+[0m12:07:56.520716 [info ] [Thread-2 (]: 26 of 27 OK created sql table model RAW.mart_stock_analysis .................... [[32mSUCCESS 1[0m in 2.55s]
+[0m12:07:56.521618 [debug] [Thread-2 (]: Finished running node model.itm327.mart_stock_analysis
+[0m12:07:56.522312 [debug] [Thread-2 (]: Began running node model.itm327.mart_news_sentiment
+[0m12:07:56.523128 [info ] [Thread-2 (]: 27 of 27 START python table model RAW.mart_news_sentiment ...................... [RUN]
+[0m12:07:56.523841 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.mart_stock_analysis, now model.itm327.mart_news_sentiment)
+[0m12:07:56.524409 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_news_sentiment
+[0m12:07:56.556064 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_news_sentiment"
+[0m12:07:56.556903 [debug] [Thread-2 (]: Began executing node model.itm327.mart_news_sentiment
+[0m12:07:56.567941 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.mart_news_sentiment"
+[0m12:07:56.570552 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_news_sentiment"
+[0m12:07:56.571575 [debug] [Thread-2 (]: On model.itm327.mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_news_sentiment"} */
+WITH mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL mart_news_sentiment__dbt_sp();
+[0m12:07:56.572453 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:08:10.564177 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 13.991 seconds
+[0m12:08:10.568072 [info ] [Thread-2 (]: 27 of 27 OK created python table model RAW.mart_news_sentiment ................. [[32mSUCCESS 1[0m in 14.04s]
+[0m12:08:10.569908 [debug] [Thread-2 (]: Finished running node model.itm327.mart_news_sentiment
+[0m12:08:10.572439 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m12:08:10.572955 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m12:08:10.573390 [debug] [Dummy-1   ]: Connection 'model.itm327.mart_news_sentiment' was properly closed.
+[0m12:08:10.574031 [info ] [Dummy-1   ]: 
+[0m12:08:10.574562 [info ] [Dummy-1   ]: Finished running 8 table models, 19 data tests in 0 hours 0 minutes and 46.73 seconds (46.73s).
+[0m12:08:10.580050 [debug] [Dummy-1   ]: Command end result
+[0m12:08:10.616236 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:08:10.618497 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:08:10.627395 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m12:08:10.627934 [info ] [Dummy-1   ]: 
+[0m12:08:10.628649 [info ] [Dummy-1   ]: [31mCompleted with 19 errors, 0 partial successes, and 0 warnings:[0m
+[0m12:08:10.629170 [info ] [Dummy-1   ]: 
+[0m12:08:10.629816 [error] [Dummy-1   ]:   Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_CLOSE.sql
+[0m12:08:10.630310 [info ] [Dummy-1   ]: 
+[0m12:08:10.630923 [error] [Dummy-1   ]:   Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_HIGH.sql
+[0m12:08:10.631400 [info ] [Dummy-1   ]: 
+[0m12:08:10.632037 [error] [Dummy-1   ]:   Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_LOW.sql
+[0m12:08:10.632522 [info ] [Dummy-1   ]: 
+[0m12:08:10.633141 [error] [Dummy-1   ]:   Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_OPEN.sql
+[0m12:08:10.633631 [info ] [Dummy-1   ]: 
+[0m12:08:10.634239 [error] [Dummy-1   ]:   Database Error in test source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_is_positive_amount_snowbearair_LASTN_FI_STOCKS_VOLUME.sql
+[0m12:08:10.634721 [info ] [Dummy-1   ]: 
+[0m12:08:10.635320 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_DATETIME.sql
+[0m12:08:10.635815 [info ] [Dummy-1   ]: 
+[0m12:08:10.636422 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_HEADLINE.sql
+[0m12:08:10.636895 [info ] [Dummy-1   ]: 
+[0m12:08:10.637488 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_ID.sql
+[0m12:08:10.637956 [info ] [Dummy-1   ]: 
+[0m12:08:10.638650 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_NEWS_RELATED (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_NEWS_RELATED.sql
+[0m12:08:10.639147 [info ] [Dummy-1   ]: 
+[0m12:08:10.639770 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_CLOSE.sql
+[0m12:08:10.640249 [info ] [Dummy-1   ]: 
+[0m12:08:10.640842 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_HIGH.sql
+[0m12:08:10.641308 [info ] [Dummy-1   ]: 
+[0m12:08:10.641902 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_LOW (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_LOW.sql
+[0m12:08:10.642373 [info ] [Dummy-1   ]: 
+[0m12:08:10.642967 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_OPEN.sql
+[0m12:08:10.643437 [info ] [Dummy-1   ]: 
+[0m12:08:10.644064 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_SYMBOL.sql
+[0m12:08:10.644547 [info ] [Dummy-1   ]: 
+[0m12:08:10.645143 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_TRADE_DATE.sql
+[0m12:08:10.645612 [info ] [Dummy-1   ]: 
+[0m12:08:10.646206 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_STOCKS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_STOCKS_VOLUME.sql
+[0m12:08:10.646671 [info ] [Dummy-1   ]: 
+[0m12:08:10.647259 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_CITY (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_CITY.sql
+[0m12:08:10.647740 [info ] [Dummy-1   ]: 
+[0m12:08:10.648417 [error] [Dummy-1   ]:   Database Error in test source_not_null_snowbearair_LASTN_FI_WEATHER_DATE (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_WEATHER' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_not_null_snowbearair_LASTN_FI_WEATHER_DATE.sql
+[0m12:08:10.648939 [info ] [Dummy-1   ]: 
+[0m12:08:10.649549 [error] [Dummy-1   ]:   Database Error in test source_unique_snowbearair_LASTN_FI_NEWS_ID (models/staging/__sources.yml)
+  002003 (42S02): SQL compilation error:
+  Object 'SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS' does not exist or not authorized.
+  compiled code at /tmp/dbt/target/run/itm327/models/staging/__sources.yml/source_unique_snowbearair_LASTN_FI_NEWS_ID.sql
+[0m12:08:10.650060 [info ] [Dummy-1   ]: 
+[0m12:08:10.650565 [info ] [Dummy-1   ]: Done. PASS=8 WARN=0 ERROR=19 SKIP=0 TOTAL=27
+[0m12:08:10.652326 [debug] [Dummy-1   ]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 48.44808, "process_in_blocks": "0", "process_kernel_time": 1.23, "process_mem_max_rss": "435504", "process_out_blocks": "0", "process_user_time": 6.01}
+[0m12:08:10.653001 [debug] [Dummy-1   ]: Command `cli build` failed at 12:08:10.652728 after 48.45 seconds
+[0m12:08:10.653544 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 12:12:01.601465 | e0629513-3dc7-40fd-9e5c-8ec6e23a7e11 ==============================
+[0m12:12:01.601465 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m12:12:01.602469 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m12:12:01.958238 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m12:12:02.539590 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m12:12:02.808289 [debug] [Dummy-1   ]: Partial parsing enabled: 1 files deleted, 0 files added, 0 files changed.
+[0m12:12:03.012032 [warn ] [Dummy-1   ]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.itm327.staging
+[0m12:12:03.128621 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:12:03.130847 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:12:03.181673 [info ] [Dummy-1   ]: Found 8 models, 3 sources, 476 macros
+[0m12:12:03.183974 [info ] [Dummy-1   ]: 
+[0m12:12:03.184511 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m12:12:03.184976 [info ] [Dummy-1   ]: 
+[0m12:12:03.185766 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m12:12:03.192385 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m12:12:03.296193 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m12:12:03.296780 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m12:12:03.297263 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:12:03.805350 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.508 seconds
+[0m12:12:03.810661 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m12:12:03.827025 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:12:03.827599 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m12:12:03.828132 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:12:04.375545 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.547 seconds
+[0m12:12:04.380726 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:12:04.381286 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m12:12:04.590071 [debug] [ThreadPool]: SQL status: SUCCESS 120 in 0.208 seconds
+[0m12:12:04.596134 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:12:04.596676 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m12:12:04.704695 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.107 seconds
+[0m12:12:04.748396 [debug] [Thread-2 (]: Began running node model.itm327.mart_news_sentiment
+[0m12:12:04.749201 [info ] [Thread-2 (]: 1 of 2 START python table model RAW.mart_news_sentiment ........................ [RUN]
+[0m12:12:04.749915 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.mart_news_sentiment)
+[0m12:12:04.750483 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_news_sentiment
+[0m12:12:04.788498 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_news_sentiment"
+[0m12:12:04.789354 [debug] [Thread-2 (]: Began executing node model.itm327.mart_news_sentiment
+[0m12:12:04.834664 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.mart_news_sentiment"
+[0m12:12:04.837289 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_news_sentiment"
+[0m12:12:04.838399 [debug] [Thread-2 (]: On model.itm327.mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_news_sentiment"} */
+WITH mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL mart_news_sentiment__dbt_sp();
+[0m12:12:04.839314 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:12:16.748225 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 11.909 seconds
+[0m12:12:16.782110 [info ] [Thread-2 (]: 1 of 2 OK created python table model RAW.mart_news_sentiment ................... [[32mSUCCESS 1[0m in 12.03s]
+[0m12:12:16.783046 [debug] [Thread-2 (]: Finished running node model.itm327.mart_news_sentiment
+[0m12:12:16.783786 [debug] [Thread-2 (]: Began running node model.itm327.mart_stock_analysis
+[0m12:12:16.784641 [info ] [Thread-2 (]: 2 of 2 START sql table model RAW.mart_stock_analysis ........................... [RUN]
+[0m12:12:16.785333 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.mart_news_sentiment, now model.itm327.mart_stock_analysis)
+[0m12:12:16.785899 [debug] [Thread-2 (]: Began compiling node model.itm327.mart_stock_analysis
+[0m12:12:16.792177 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.mart_stock_analysis"
+[0m12:12:16.792984 [debug] [Thread-2 (]: Began executing node model.itm327.mart_stock_analysis
+[0m12:12:16.800911 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.mart_stock_analysis"
+[0m12:12:16.802946 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.mart_stock_analysis"
+[0m12:12:16.803650 [debug] [Thread-2 (]: On model.itm327.mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m12:12:16.804249 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:12:18.523866 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.719 seconds
+[0m12:12:18.527551 [info ] [Thread-2 (]: 2 of 2 OK created sql table model RAW.mart_stock_analysis ...................... [[32mSUCCESS 1[0m in 1.74s]
+[0m12:12:18.528530 [debug] [Thread-2 (]: Finished running node model.itm327.mart_stock_analysis
+[0m12:12:18.531170 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m12:12:18.531724 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m12:12:18.532188 [debug] [Dummy-1   ]: Connection 'model.itm327.mart_stock_analysis' was properly closed.
+[0m12:12:18.532813 [info ] [Dummy-1   ]: 
+[0m12:12:18.533340 [info ] [Dummy-1   ]: Finished running 2 table models in 0 hours 0 minutes and 15.35 seconds (15.35s).
+[0m12:12:18.534476 [debug] [Dummy-1   ]: Command end result
+[0m12:12:18.564367 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:12:18.566484 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:12:18.574230 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m12:12:18.574746 [info ] [Dummy-1   ]: 
+[0m12:12:18.575404 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m12:12:18.575916 [info ] [Dummy-1   ]: 
+[0m12:12:18.576448 [info ] [Dummy-1   ]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:12:18.578129 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 17.071627, "process_in_blocks": "0", "process_kernel_time": 1.09, "process_mem_max_rss": "426560", "process_out_blocks": "0", "process_user_time": 5.01}
+[0m12:12:18.578896 [debug] [Dummy-1   ]: Command `cli run` succeeded at 12:12:18.578609 after 17.07 seconds
+[0m12:12:18.579433 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 12:13:14.948691 | 883396aa-febb-4d75-86fd-c321825932fb ==============================
+[0m12:13:14.948691 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m12:13:14.949718 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'invocation_command': 'dbt ', 'send_anonymous_usage_stats': 'False'}
+[0m12:13:15.302819 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m12:13:15.855494 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m12:13:16.091557 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m12:13:16.092480 [debug] [Dummy-1   ]: Partial parsing: added file: itm327://models/marts/OLIPHANT_J_mart_news_sentiment.py
+[0m12:13:16.093093 [debug] [Dummy-1   ]: Partial parsing: added file: itm327://models/marts/OLIPHANT_J_mart_stock_analysis.sql
+[0m12:13:16.615233 [warn ] [Dummy-1   ]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.itm327.staging
+[0m12:13:16.729153 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:13:16.731378 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:13:16.780617 [info ] [Dummy-1   ]: Found 10 models, 3 sources, 476 macros
+[0m12:13:16.783165 [info ] [Dummy-1   ]: 
+[0m12:13:16.783731 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m12:13:16.784208 [info ] [Dummy-1   ]: 
+[0m12:13:16.784965 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m12:13:16.791566 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m12:13:16.893323 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m12:13:16.893904 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m12:13:16.894382 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:13:17.535282 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.641 seconds
+[0m12:13:17.540423 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m12:13:17.556336 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:13:17.556891 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m12:13:17.557376 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:13:18.316634 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.759 seconds
+[0m12:13:18.321793 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:13:18.322350 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m12:13:18.614045 [debug] [ThreadPool]: SQL status: SUCCESS 120 in 0.291 seconds
+[0m12:13:18.620091 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m12:13:18.620623 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m12:13:18.761479 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.140 seconds
+[0m12:13:18.805925 [debug] [Thread-2 (]: Began running node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m12:13:18.806824 [info ] [Thread-2 (]: 1 of 2 START python table model RAW.OLIPHANT_J_mart_news_sentiment ............. [RUN]
+[0m12:13:18.807574 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.OLIPHANT_J_mart_news_sentiment)
+[0m12:13:18.808191 [debug] [Thread-2 (]: Began compiling node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m12:13:18.846327 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m12:13:18.847161 [debug] [Thread-2 (]: Began executing node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m12:13:18.892439 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m12:13:18.895100 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m12:13:18.896200 [debug] [Thread-2 (]: On model.itm327.OLIPHANT_J_mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.OLIPHANT_J_mart_news_sentiment"} */
+WITH OLIPHANT_J_mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "OLIPHANT_J_mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL OLIPHANT_J_mart_news_sentiment__dbt_sp();
+[0m12:13:18.897096 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:13:30.192039 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 11.295 seconds
+[0m12:13:30.222649 [info ] [Thread-2 (]: 1 of 2 OK created python table model RAW.OLIPHANT_J_mart_news_sentiment ........ [[32mSUCCESS 1[0m in 11.41s]
+[0m12:13:30.223585 [debug] [Thread-2 (]: Finished running node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m12:13:30.224324 [debug] [Thread-2 (]: Began running node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m12:13:30.225190 [info ] [Thread-2 (]: 2 of 2 START sql table model RAW.OLIPHANT_J_mart_stock_analysis ................ [RUN]
+[0m12:13:30.225867 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.OLIPHANT_J_mart_news_sentiment, now model.itm327.OLIPHANT_J_mart_stock_analysis)
+[0m12:13:30.226429 [debug] [Thread-2 (]: Began compiling node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m12:13:30.232672 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m12:13:30.233466 [debug] [Thread-2 (]: Began executing node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m12:13:30.241266 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m12:13:30.243234 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m12:13:30.243943 [debug] [Thread-2 (]: On model.itm327.OLIPHANT_J_mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.OLIPHANT_J_mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m12:13:30.244541 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m12:13:31.852176 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.607 seconds
+[0m12:13:31.855511 [info ] [Thread-2 (]: 2 of 2 OK created sql table model RAW.OLIPHANT_J_mart_stock_analysis ........... [[32mSUCCESS 1[0m in 1.63s]
+[0m12:13:31.856446 [debug] [Thread-2 (]: Finished running node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m12:13:31.859017 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m12:13:31.859549 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m12:13:31.860034 [debug] [Dummy-1   ]: Connection 'model.itm327.OLIPHANT_J_mart_stock_analysis' was properly closed.
+[0m12:13:31.860616 [info ] [Dummy-1   ]: 
+[0m12:13:31.861124 [info ] [Dummy-1   ]: Finished running 2 table models in 0 hours 0 minutes and 15.08 seconds (15.08s).
+[0m12:13:31.862218 [debug] [Dummy-1   ]: Command end result
+[0m12:13:31.892296 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m12:13:31.894401 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m12:13:31.902116 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m12:13:31.902690 [info ] [Dummy-1   ]: 
+[0m12:13:31.903330 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m12:13:31.903831 [info ] [Dummy-1   ]: 
+[0m12:13:31.904353 [info ] [Dummy-1   ]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:13:31.906043 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 17.052095, "process_in_blocks": "0", "process_kernel_time": 0.88, "process_mem_max_rss": "491332", "process_out_blocks": "0", "process_user_time": 5.43}
+[0m12:13:31.906702 [debug] [Dummy-1   ]: Command `cli run` succeeded at 12:13:31.906439 after 17.05 seconds
+[0m12:13:31.907227 [debug] [Dummy-1   ]: Flushing usage events

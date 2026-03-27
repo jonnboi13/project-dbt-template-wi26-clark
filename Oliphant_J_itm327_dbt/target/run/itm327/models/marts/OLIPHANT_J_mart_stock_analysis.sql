@@ -1,0 +1,31 @@
+
+  
+    
+
+        create or replace transient table SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+      
+  

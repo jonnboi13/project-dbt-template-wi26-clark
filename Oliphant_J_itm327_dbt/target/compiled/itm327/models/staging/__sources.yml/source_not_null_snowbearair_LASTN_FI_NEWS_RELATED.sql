@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select RELATED
+from SNOWBEARAIR_DB.RAW.LASTN_FI_NEWS
+where RELATED is null
+
+

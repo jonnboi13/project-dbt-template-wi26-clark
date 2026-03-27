@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: raw
+    database: SNOWBEARAIR_DB
+    schema: RAW
+    tables:
+      - name: MONGO_DAG_OLIPHANT_J
+      - name: WEATHER_API_DAG_OLIPHANT_J
+      - name: NEWS_API_DAG_OLIPHANT_J

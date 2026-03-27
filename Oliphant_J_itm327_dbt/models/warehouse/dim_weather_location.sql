@@ -1,0 +1,3 @@
+SELECT DISTINCT
+    CITY
+FROM {{ source('raw', 'WEATHER_API_DAG_OLIPHANT_J') }}
