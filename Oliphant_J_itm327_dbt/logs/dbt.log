@@ -2642,3 +2642,400 @@ LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
 [0m12:13:31.906043 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 17.052095, "process_in_blocks": "0", "process_kernel_time": 0.88, "process_mem_max_rss": "491332", "process_out_blocks": "0", "process_user_time": 5.43}
 [0m12:13:31.906702 [debug] [Dummy-1   ]: Command `cli run` succeeded at 12:13:31.906439 after 17.05 seconds
 [0m12:13:31.907227 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 13:20:58.285624 | 41ce1f94-f96d-46ed-b29a-5571fd77844a ==============================
+[0m13:20:58.285624 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m13:20:58.286847 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m13:20:58.676845 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m13:20:59.241241 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m13:20:59.494210 [debug] [Dummy-1   ]: Partial parsing enabled: 2 files deleted, 0 files added, 0 files changed.
+[0m13:20:59.495110 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/marts/mart_news_sentiment.py
+[0m13:20:59.495734 [debug] [Dummy-1   ]: Partial parsing: deleted file: itm327://models/marts/mart_stock_analysis.sql
+[0m13:20:59.732124 [warn ] [Dummy-1   ]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.itm327.staging
+[0m13:20:59.861633 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:20:59.864417 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:20:59.920450 [info ] [Dummy-1   ]: Found 8 models, 3 sources, 476 macros
+[0m13:20:59.923527 [info ] [Dummy-1   ]: 
+[0m13:20:59.924163 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m13:20:59.924640 [info ] [Dummy-1   ]: 
+[0m13:20:59.925537 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m13:20:59.933597 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB'
+[0m13:21:00.045825 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB"
+[0m13:21:00.046505 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB"} */
+show terse schemas in database SNOWBEARAIR_DB
+    limit 10000
+[0m13:21:00.047031 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:00.658004 [debug] [ThreadPool]: SQL status: SUCCESS 9 in 0.611 seconds
+[0m13:21:00.664004 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_SNOWBEARAIR_DB_RAW'
+[0m13:21:00.681956 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:21:00.682615 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m13:21:00.683134 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:21:01.360842 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.677 seconds
+[0m13:21:01.367038 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:21:01.367699 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+show objects in SNOWBEARAIR_DB.RAW
+    limit 10000
+    
+;
+[0m13:21:01.626647 [debug] [ThreadPool]: SQL status: SUCCESS 132 in 0.258 seconds
+[0m13:21:01.633964 [debug] [ThreadPool]: Using snowflake connection "list_SNOWBEARAIR_DB_RAW"
+[0m13:21:01.634637 [debug] [ThreadPool]: On list_SNOWBEARAIR_DB_RAW: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "connection_name": "list_SNOWBEARAIR_DB_RAW"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m13:21:01.734976 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.100 seconds
+[0m13:21:01.788698 [debug] [Thread-2 (]: Began running node model.itm327.dim_date
+[0m13:21:01.789776 [info ] [Thread-2 (]: 1 of 8 START sql table model RAW.dim_date ...................................... [RUN]
+[0m13:21:01.790654 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_SNOWBEARAIR_DB_RAW, now model.itm327.dim_date)
+[0m13:21:01.791286 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_date
+[0m13:21:01.805565 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_date"
+[0m13:21:01.806642 [debug] [Thread-2 (]: Began executing node model.itm327.dim_date
+[0m13:21:01.856910 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_date"
+[0m13:21:01.859501 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_date"
+[0m13:21:01.860314 [debug] [Thread-2 (]: On model.itm327.dim_date: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_date"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_date
+         as
+        (SELECT DISTINCT
+    CAST(DATETIME AS DATE) AS CALENDAR_DATE,
+    DAY(CAST(DATETIME AS DATE)) AS DAY_NUM_IN_MONTH,
+    DAYNAME(CAST(DATETIME AS DATE)) AS DAY_NAME,
+    DAYOFWEEK(CAST(DATETIME AS DATE)) AS DAY_OF_WEEK_NUM,
+    WEEK(CAST(DATETIME AS DATE)) AS WEEK_NUM,
+    MONTH(CAST(DATETIME AS DATE)) AS MONTH_NUM,
+    MONTHNAME(CAST(DATETIME AS DATE)) AS MONTH_NAME,
+    QUARTER(CAST(DATETIME AS DATE)) AS QUARTER,
+    YEAR(CAST(DATETIME AS DATE)) AS YEAR,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKEND_FLAG,
+    CASE WHEN DAYNAME(CAST(DATETIME AS DATE)) NOT IN ('Sat','Sun') THEN TRUE ELSE FALSE END AS IS_WEEKDAY_FLAG
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+        );
+[0m13:21:01.860987 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:03.975443 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.114 seconds
+[0m13:21:04.012062 [info ] [Thread-2 (]: 1 of 8 OK created sql table model RAW.dim_date ................................. [[32mSUCCESS 1[0m in 2.22s]
+[0m13:21:04.013127 [debug] [Thread-2 (]: Finished running node model.itm327.dim_date
+[0m13:21:04.013900 [debug] [Thread-2 (]: Began running node model.itm327.dim_news
+[0m13:21:04.014902 [info ] [Thread-2 (]: 2 of 8 START sql table model RAW.dim_news ...................................... [RUN]
+[0m13:21:04.015690 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_date, now model.itm327.dim_news)
+[0m13:21:04.016260 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_news
+[0m13:21:04.022510 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_news"
+[0m13:21:04.023475 [debug] [Thread-2 (]: Began executing node model.itm327.dim_news
+[0m13:21:04.030626 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_news"
+[0m13:21:04.032209 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_news"
+[0m13:21:04.032910 [debug] [Thread-2 (]: On model.itm327.dim_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_news
+         as
+        (SELECT DISTINCT
+    ID AS NEWS_ID,
+    HEADLINE,
+    SUMMARY,
+    SOURCE,
+    CATEGORY,
+    URL,
+    IMAGE
+FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J
+WHERE ID IS NOT NULL
+        );
+[0m13:21:04.033545 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:06.747364 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.714 seconds
+[0m13:21:06.754259 [info ] [Thread-2 (]: 2 of 8 OK created sql table model RAW.dim_news ................................. [[32mSUCCESS 1[0m in 2.74s]
+[0m13:21:06.755275 [debug] [Thread-2 (]: Finished running node model.itm327.dim_news
+[0m13:21:06.756007 [debug] [Thread-2 (]: Began running node model.itm327.dim_stocks
+[0m13:21:06.756964 [info ] [Thread-2 (]: 3 of 8 START sql table model RAW.dim_stocks .................................... [RUN]
+[0m13:21:06.757783 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_news, now model.itm327.dim_stocks)
+[0m13:21:06.758447 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_stocks
+[0m13:21:06.764514 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_stocks"
+[0m13:21:06.765489 [debug] [Thread-2 (]: Began executing node model.itm327.dim_stocks
+[0m13:21:06.772433 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_stocks"
+[0m13:21:06.773968 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_stocks"
+[0m13:21:06.774669 [debug] [Thread-2 (]: On model.itm327.dim_stocks: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_stocks"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_stocks
+         as
+        (SELECT DISTINCT
+    SYMBOL,
+    MIN(DATETIME) AS START_DATE,
+    TRUE AS IS_CURRENT
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J
+GROUP BY SYMBOL
+        );
+[0m13:21:06.775352 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:09.145566 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 2.370 seconds
+[0m13:21:09.149446 [info ] [Thread-2 (]: 3 of 8 OK created sql table model RAW.dim_stocks ............................... [[32mSUCCESS 1[0m in 2.39s]
+[0m13:21:09.150443 [debug] [Thread-2 (]: Finished running node model.itm327.dim_stocks
+[0m13:21:09.151201 [debug] [Thread-2 (]: Began running node model.itm327.dim_weather_location
+[0m13:21:09.152166 [info ] [Thread-2 (]: 4 of 8 START sql table model RAW.dim_weather_location .......................... [RUN]
+[0m13:21:09.152957 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_stocks, now model.itm327.dim_weather_location)
+[0m13:21:09.153576 [debug] [Thread-2 (]: Began compiling node model.itm327.dim_weather_location
+[0m13:21:09.159814 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.dim_weather_location"
+[0m13:21:09.160802 [debug] [Thread-2 (]: Began executing node model.itm327.dim_weather_location
+[0m13:21:09.167836 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.dim_weather_location"
+[0m13:21:09.169381 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.dim_weather_location"
+[0m13:21:09.170061 [debug] [Thread-2 (]: On model.itm327.dim_weather_location: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.dim_weather_location"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.dim_weather_location
+         as
+        (SELECT DISTINCT
+    CITY
+FROM SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J
+        );
+[0m13:21:09.170668 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:11.128942 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.958 seconds
+[0m13:21:11.132923 [info ] [Thread-2 (]: 4 of 8 OK created sql table model RAW.dim_weather_location ..................... [[32mSUCCESS 1[0m in 1.98s]
+[0m13:21:11.133990 [debug] [Thread-2 (]: Finished running node model.itm327.dim_weather_location
+[0m13:21:11.135572 [debug] [Thread-2 (]: Began running node model.itm327.fact_ml_analysis
+[0m13:21:11.136675 [info ] [Thread-2 (]: 5 of 8 START sql table model RAW.fact_ml_analysis .............................. [RUN]
+[0m13:21:11.137509 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.dim_weather_location, now model.itm327.fact_ml_analysis)
+[0m13:21:11.138105 [debug] [Thread-2 (]: Began compiling node model.itm327.fact_ml_analysis
+[0m13:21:11.148920 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.fact_ml_analysis"
+[0m13:21:11.149931 [debug] [Thread-2 (]: Began executing node model.itm327.fact_ml_analysis
+[0m13:21:11.156872 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.fact_ml_analysis"
+[0m13:21:11.159365 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.fact_ml_analysis"
+[0m13:21:11.160143 [debug] [Thread-2 (]: On model.itm327.fact_ml_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.fact_ml_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.fact_ml_analysis
+         as
+        (SELECT
+    d.CALENDAR_DATE,
+    s.SYMBOL,
+    w.CITY,
+    r.OPEN,
+    r.HIGH,
+    r.LOW,
+    r.CLOSE,
+    r.VOLUME,
+    rw.MAX_TEMP,
+    rw.PRECIP AS PRECIPITATION,
+    (
+        SELECT COUNT(*) 
+        FROM SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J n
+        WHERE CAST(n.DATETIME AS DATE) = CAST(r.DATETIME AS DATE)
+    ) AS NEWS_COUNT_TOTAL
+FROM SNOWBEARAIR_DB.RAW.MONGO_DAG_OLIPHANT_J r
+JOIN SNOWBEARAIR_DB.RAW.dim_date d 
+    ON CAST(r.DATETIME AS DATE) = d.CALENDAR_DATE
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s 
+    ON r.SYMBOL = s.SYMBOL
+LEFT JOIN SNOWBEARAIR_DB.RAW.WEATHER_API_DAG_OLIPHANT_J rw 
+    ON CAST(r.DATETIME AS DATE) = rw.DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w 
+    ON rw.CITY = w.CITY
+        );
+[0m13:21:11.160758 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:18.767370 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 7.606 seconds
+[0m13:21:18.770938 [info ] [Thread-2 (]: 5 of 8 OK created sql table model RAW.fact_ml_analysis ......................... [[32mSUCCESS 1[0m in 7.63s]
+[0m13:21:18.771887 [debug] [Thread-2 (]: Finished running node model.itm327.fact_ml_analysis
+[0m13:21:18.773225 [debug] [Thread-2 (]: Began running node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m13:21:18.774309 [info ] [Thread-2 (]: 6 of 8 START sql table model RAW.OLIPHANT_J_mart_stock_analysis ................ [RUN]
+[0m13:21:18.775077 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.fact_ml_analysis, now model.itm327.OLIPHANT_J_mart_stock_analysis)
+[0m13:21:18.775664 [debug] [Thread-2 (]: Began compiling node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m13:21:18.782765 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m13:21:18.783686 [debug] [Thread-2 (]: Began executing node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m13:21:18.790503 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m13:21:18.792698 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.OLIPHANT_J_mart_stock_analysis"
+[0m13:21:18.793431 [debug] [Thread-2 (]: On model.itm327.OLIPHANT_J_mart_stock_analysis: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.OLIPHANT_J_mart_stock_analysis"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_stock_analysis
+         as
+        (SELECT
+    s.SYMBOL,
+    d.CALENDAR_DATE,
+    d.YEAR,
+    d.MONTH_NUM,
+    d.MONTH_NAME,
+    d.IS_WEEKEND_FLAG,
+    w.CITY,
+    f.OPEN,
+    f.CLOSE,
+    f.HIGH,
+    f.LOW,
+    f.VOLUME,
+    f.MAX_TEMP,
+    f.PRECIPITATION,
+    f.NEWS_COUNT_TOTAL,
+    f.CLOSE - f.OPEN AS DAILY_PRICE_CHANGE,
+    CASE WHEN f.CLOSE > f.OPEN THEN 'UP' WHEN f.CLOSE < f.OPEN THEN 'DOWN' ELSE 'FLAT' END AS DAILY_DIRECTION
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.dim_stocks s ON f.SYMBOL = s.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_date d ON f.CALENDAR_DATE = d.CALENDAR_DATE
+LEFT JOIN SNOWBEARAIR_DB.RAW.dim_weather_location w ON f.CITY = w.CITY
+        );
+[0m13:21:18.794038 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:20.528432 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.734 seconds
+[0m13:21:20.532148 [info ] [Thread-2 (]: 6 of 8 OK created sql table model RAW.OLIPHANT_J_mart_stock_analysis ........... [[32mSUCCESS 1[0m in 1.76s]
+[0m13:21:20.533103 [debug] [Thread-2 (]: Finished running node model.itm327.OLIPHANT_J_mart_stock_analysis
+[0m13:21:20.533804 [debug] [Thread-2 (]: Began running node model.itm327.bridge_fact_news
+[0m13:21:20.534631 [info ] [Thread-2 (]: 7 of 8 START sql table model RAW.bridge_fact_news .............................. [RUN]
+[0m13:21:20.535317 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.OLIPHANT_J_mart_stock_analysis, now model.itm327.bridge_fact_news)
+[0m13:21:20.535864 [debug] [Thread-2 (]: Began compiling node model.itm327.bridge_fact_news
+[0m13:21:20.544406 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.bridge_fact_news"
+[0m13:21:20.545285 [debug] [Thread-2 (]: Began executing node model.itm327.bridge_fact_news
+[0m13:21:20.551473 [debug] [Thread-2 (]: Writing runtime sql for node "model.itm327.bridge_fact_news"
+[0m13:21:20.552951 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.bridge_fact_news"
+[0m13:21:20.553596 [debug] [Thread-2 (]: On model.itm327.bridge_fact_news: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.bridge_fact_news"} */
+create or replace transient table SNOWBEARAIR_DB.RAW.bridge_fact_news
+         as
+        (SELECT DISTINCT
+    f.SYMBOL,
+    f.CALENDAR_DATE,
+    n.NEWS_ID
+FROM SNOWBEARAIR_DB.RAW.fact_ml_analysis f
+JOIN SNOWBEARAIR_DB.RAW.NEWS_API_DAG_OLIPHANT_J r
+    ON r.RELATED = f.SYMBOL
+JOIN SNOWBEARAIR_DB.RAW.dim_news n
+    ON n.NEWS_ID = r.ID
+        );
+[0m13:21:20.554159 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:22.310121 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.756 seconds
+[0m13:21:22.313456 [info ] [Thread-2 (]: 7 of 8 OK created sql table model RAW.bridge_fact_news ......................... [[32mSUCCESS 1[0m in 1.78s]
+[0m13:21:22.314355 [debug] [Thread-2 (]: Finished running node model.itm327.bridge_fact_news
+[0m13:21:22.315544 [debug] [Thread-2 (]: Began running node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m13:21:22.316414 [info ] [Thread-2 (]: 8 of 8 START python table model RAW.OLIPHANT_J_mart_news_sentiment ............. [RUN]
+[0m13:21:22.317106 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.itm327.bridge_fact_news, now model.itm327.OLIPHANT_J_mart_news_sentiment)
+[0m13:21:22.317676 [debug] [Thread-2 (]: Began compiling node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m13:21:22.349828 [debug] [Thread-2 (]: Writing injected SQL for node "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m13:21:22.350705 [debug] [Thread-2 (]: Began executing node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m13:21:22.359790 [debug] [Thread-2 (]: Writing runtime python for node "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m13:21:22.362500 [debug] [Thread-2 (]: Using snowflake connection "model.itm327.OLIPHANT_J_mart_news_sentiment"
+[0m13:21:22.363558 [debug] [Thread-2 (]: On model.itm327.OLIPHANT_J_mart_news_sentiment: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "itm327", "target_name": "dev", "node_id": "model.itm327.OLIPHANT_J_mart_news_sentiment"} */
+WITH OLIPHANT_J_mart_news_sentiment__dbt_sp AS PROCEDURE ()
+
+RETURNS STRING
+LANGUAGE PYTHON
+RUNTIME_VERSION = '3.9'
+PACKAGES = ('snowflake-snowpark-python')
+
+
+
+HANDLER = 'main'
+EXECUTE AS CALLER
+AS
+$$
+
+
+
+  
+    
+    
+import pandas as pd
+
+def model(dbt, session):
+    dbt.config(materialized="table")
+
+    fact = dbt.ref("fact_ml_analysis").to_pandas()
+    news = dbt.ref("dim_news").to_pandas()
+    bridge = dbt.ref("bridge_fact_news").to_pandas()
+
+    # Join bridge to news
+    news_per_stock = bridge.merge(news, on="NEWS_ID")
+
+    # Aggregate to weekly grain — different from SQL mart which is daily
+    fact["CALENDAR_DATE"] = pd.to_datetime(fact["CALENDAR_DATE"])
+    fact["WEEK"] = fact["CALENDAR_DATE"].dt.isocalendar().week
+    fact["YEAR"] = fact["CALENDAR_DATE"].dt.year
+
+    weekly = fact.groupby(["SYMBOL", "YEAR", "WEEK", "CITY"]).agg(
+        AVG_CLOSE=("CLOSE", "mean"),
+        AVG_VOLUME=("VOLUME", "mean"),
+        AVG_TEMP=("MAX_TEMP", "mean"),
+        TOTAL_NEWS=("NEWS_COUNT_TOTAL", "sum"),
+        WEEK_PRICE_CHANGE=("CLOSE", lambda x: x.iloc[-1] - x.iloc[0])
+    ).reset_index()
+
+    return weekly
+
+
+# This part is user provided model code
+# you will need to copy the next section to run the code
+# COMMAND ----------
+# this part is dbt logic for get ref work, do not modify
+
+def ref(*args, **kwargs):
+    refs = {"bridge_fact_news": "SNOWBEARAIR_DB.RAW.bridge_fact_news", "dim_news": "SNOWBEARAIR_DB.RAW.dim_news", "fact_ml_analysis": "SNOWBEARAIR_DB.RAW.fact_ml_analysis"}
+    key = '.'.join(args)
+    version = kwargs.get("v") or kwargs.get("version")
+    if version:
+        key += f".v{version}"
+    dbt_load_df_function = kwargs.get("dbt_load_df_function")
+    return dbt_load_df_function(refs[key])
+
+
+def source(*args, dbt_load_df_function):
+    sources = {}
+    key = '.'.join(args)
+    return dbt_load_df_function(sources[key])
+
+
+config_dict = {}
+
+
+class config:
+    def __init__(self, *args, **kwargs):
+        pass
+
+    @staticmethod
+    def get(key, default=None):
+        return config_dict.get(key, default)
+
+class this:
+    """dbt.this() or dbt.this.identifier"""
+    database = "SNOWBEARAIR_DB"
+    schema = "RAW"
+    identifier = "OLIPHANT_J_mart_news_sentiment"
+    
+    def __repr__(self):
+        return 'SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_news_sentiment'
+
+
+class dbtObj:
+    def __init__(self, load_df_function) -> None:
+        self.source = lambda *args: source(*args, dbt_load_df_function=load_df_function)
+        self.ref = lambda *args, **kwargs: ref(*args, **kwargs, dbt_load_df_function=load_df_function)
+        self.config = config
+        self.this = this()
+        self.is_incremental = False
+
+# COMMAND ----------
+
+
+
+def materialize(session, df, target_relation):
+    # make sure pandas exists
+    import importlib.util
+    package_name = 'pandas'
+    if importlib.util.find_spec(package_name):
+        import pandas
+        if isinstance(df, pandas.core.frame.DataFrame):
+          session.use_database(target_relation.database)
+          session.use_schema(target_relation.schema)
+          # session.write_pandas does not have overwrite function
+          df = session.createDataFrame(df)
+    
+    df.write.mode("overwrite").save_as_table('SNOWBEARAIR_DB.RAW.OLIPHANT_J_mart_news_sentiment', table_type='transient')
+
+def main(session):
+    dbt = dbtObj(session.table)
+    df = model(dbt, session)
+    materialize(session, df, dbt.this)
+    return "OK"
+
+  
+$$
+CALL OLIPHANT_J_mart_news_sentiment__dbt_sp();
+[0m13:21:22.364423 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m13:21:34.260871 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 11.896 seconds
+[0m13:21:34.264897 [info ] [Thread-2 (]: 8 of 8 OK created python table model RAW.OLIPHANT_J_mart_news_sentiment ........ [[32mSUCCESS 1[0m in 11.95s]
+[0m13:21:34.265858 [debug] [Thread-2 (]: Finished running node model.itm327.OLIPHANT_J_mart_news_sentiment
+[0m13:21:34.268778 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m13:21:34.269321 [debug] [Dummy-1   ]: Connection 'list_SNOWBEARAIR_DB' was properly closed.
+[0m13:21:34.269793 [debug] [Dummy-1   ]: Connection 'model.itm327.OLIPHANT_J_mart_news_sentiment' was properly closed.
+[0m13:21:34.270423 [info ] [Dummy-1   ]: 
+[0m13:21:34.270950 [info ] [Dummy-1   ]: Finished running 8 table models in 0 hours 0 minutes and 34.35 seconds (34.35s).
+[0m13:21:34.273082 [debug] [Dummy-1   ]: Command end result
+[0m13:21:34.306429 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m13:21:34.309001 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m13:21:34.317299 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m13:21:34.317840 [info ] [Dummy-1   ]: 
+[0m13:21:34.318583 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m13:21:34.319111 [info ] [Dummy-1   ]: 
+[0m13:21:34.319646 [info ] [Dummy-1   ]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+[0m13:21:34.321591 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 36.141777, "process_in_blocks": "0", "process_kernel_time": 1.3, "process_mem_max_rss": "423100", "process_out_blocks": "0", "process_user_time": 5.89}
+[0m13:21:34.322276 [debug] [Dummy-1   ]: Command `cli run` succeeded at 13:21:34.322007 after 36.14 seconds
+[0m13:21:34.322854 [debug] [Dummy-1   ]: Flushing usage events
